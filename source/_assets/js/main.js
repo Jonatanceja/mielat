@@ -179,31 +179,29 @@ import 'swiper/css/bundle';
 
 // Inicializar Swiper cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
-    const swiperElement = document.querySelector('.mySwiper');
-    
-    if (swiperElement) {
-        const swiper = new Swiper('.mySwiper', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            loop: true,
-            coverflowEffect: {
-                rotate: 20,
-                stretch: 0,
-                depth: 200,
-                modifier: 1,
-                slideShadows: true,
-            },
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            speed: 800,
-        });
-    }
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        speed: 800,
+    });
 });
+
+// Dropdown móvil para productos
+const mobileProductsBtn = document.getElementById('mobile-products-btn');
+const mobileProductsMenu = document.getElementById('mobile-products-menu');
+const mobileChevron = document.getElementById('mobile-chevron');
+
+if (mobileProductsBtn) {
+    mobileProductsBtn.addEventListener('click', () => {
+        mobileProductsMenu.classList.toggle('hidden');
+        mobileProductsMenu.classList.toggle('flex');
+        mobileChevron.classList.toggle('rotate-180');
+    });
+}

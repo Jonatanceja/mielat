@@ -1,10 +1,10 @@
 <section class="flex flex-col items-center">
     <!-- Swiper Slider -->
-    <div class="swiper mySwiper w-full max-w-3xl mb-8 ">
+    <div class="swiper mySwiper w-full max-w-3xl mb-8">
         <div class="swiper-wrapper">
             @foreach ($page->slider_images as $image)
             <div class="swiper-slide">
-                <div class="h-64 flex items-center justify-center">
+                <div class="h-72 flex items-center justify-center">
                     <img src="{{ $image['src'] }}" alt="{{ $image['alt'] }}" class="w-full h-full object-contain">
                 </div>
             </div>
@@ -17,7 +17,9 @@
     <h1 class="text-center text-4xl/13 md:text-6xl/19 font-semibold tracking-tight max-w-4xl">Protección Inteligente para un Mundo Conectado</h1>
     <p class="text-center text-gray-100 text-base/7 max-w-lg mt-6">Soluciones profesionales en videovigilancia, control de acceso, detección de incendios y seguridad perimetral. Tecnología que protege lo que más importa.</p>
     <div class="flex flex-col md:flex-row max-md:w-full items-center gap-4 md:gap-3 mt-6">
-        <button class="btn max-md:w-full glass py-3">Ver productos</button>
+        <a href="#productos">
+            <button class="btn max-md:w-full glass py-3">Ver productos</button>
+        </a>
     </div>
 </section>
 <section class="mt-14">

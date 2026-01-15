@@ -5,6 +5,11 @@
     --font-sans: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
     @apply bg-black text-white text-sm antialiased;
 }
@@ -34,3 +39,4 @@ body {
 h4 {
     @apply text-base/7 font-bold;
 }
+

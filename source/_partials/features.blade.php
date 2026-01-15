@@ -1,4 +1,4 @@
-<section class="mt-32">
+<section class="mt-32" id="productos">
     <div class="text-center">
         <h2 class="text-3xl font-semibold max-w-lg mx-auto mt-4 text-white">Soluciones Integrales de Seguridad</h2>
         <p class="mt-4 text-center text-sm/7 text-gray-100 max-w-md mx-auto">Tecnología profesional para cada necesidad de protección. Desde la prevención hasta la respuesta inmediata.</p>

@@ -5,7 +5,12 @@ return [
     'baseUrl' => '',
     'title' => 'Mayoristas de Integración Electrónica',
     'description' => 'Mayoristas de Integración Electrónica',
-    'collections' => [],
+    'collections' => [
+        'products' => [
+            'path' => '/productos/{filename}',
+            'extends' => '_layouts.product',               
+            ]
+    ],
     'slider_images' => [
         [
             'src' => '/assets/images/videovigilancia.png',
