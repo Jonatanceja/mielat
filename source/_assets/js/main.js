@@ -179,7 +179,7 @@ import 'swiper/css/bundle';
 
 // Inicializar Swiper cuando el DOM esté listo
 
-    var swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper(".mySwiper", {
         loop: true,
         autoplay: {
             delay: 3500,
