@@ -171,26 +171,7 @@ const plans = [
     }
 ];
 
-// import Swiper bundle with all modules installed
-import Swiper from 'swiper/bundle';
 
-// import styles bundle
-import 'swiper/css/bundle';
-
-// Inicializar Swiper cuando el DOM esté listo
-
-    const swiper = new Swiper(".mySwiper", {
-        loop: true,
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        speed: 800,
-    });
 
 
 // Dropdown móvil para productos
