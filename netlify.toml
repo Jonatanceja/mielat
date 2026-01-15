@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = "build_production"
+
+[context.production.environment]
+  PHP_VERSION = "8.3"
+  NODE_VERSION = "20"
