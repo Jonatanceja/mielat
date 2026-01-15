@@ -121,27 +121,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Inicializar Swiper
-    const swiperElement = document.querySelector('.mySwiper');
-    
-    if (swiperElement) {
-        try {
-            const swiper = new Swiper('.mySwiper', {
-                loop: true,
-                autoplay: {
-                    delay: 3500,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                speed: 800,
-            });
-        } catch (error) {
-            console.error('Error inicializando Swiper:', error);
-        }
-    }
+// Inicializar Swiper
+if (document.querySelector('.mySwiper')) {
+    setTimeout(() => {
+        new Swiper('.mySwiper', {
+            loop: true,
+            autoplay: {
+                delay: 3500,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    }, 100);
+}
 
     // Dropdown móvil para productos
     const mobileProductsBtn = document.getElementById('mobile-products-btn');
