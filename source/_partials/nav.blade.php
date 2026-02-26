@@ -16,7 +16,7 @@
             </button>
             
             <!-- Dropdown Menu -->
-            <div class="absolute top-full left-0 mt-8 w-64 glass rounded-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg">
+            <div class="absolute top-full left-0 mt-6 w-64 rounded-xl p-2 bg-gray-800 border border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg z-[999]">
                 @foreach($products as $product)
                 <a href="{{ $product->getPath() }}" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
                     {{ $product->title }}

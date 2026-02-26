@@ -13,17 +13,34 @@ return [
     ],
     'slider_images' => [
         [
-            'src' => '/assets/images/videovigilancia.png',
+            'src' => '/assets/images/videovigilancia.webp',
             'alt' => 'Videovigilancia',
         ],
         [
-            'src' => '/assets/images/intrusion.png',
+            'src' => '/assets/images/intrusion.webp',
             'alt' => 'Intrusión',
         ],
         [
-            'src' => '/assets/images/control-de-acceso.png',
+            'src' => '/assets/images/control-de-acceso.webp',
             'alt' => 'Control de acceso',
         ],
+        [
+            'src' => '/assets/images/sistemas-de-incendios.webp',
+            'alt' => 'Sistemas de incendios',
+        ],
+        [
+            'src' => '/assets/images/fuentes-de-energia.webp',
+            'alt' => 'Fuentes de energia',
+        ],
+        [
+            'src' => '/assets/images/fuentes-de-energia.webp',
+            'alt' => 'Fuentes de energia',
+        ],
+        [
+            'src' => '/assets/images/cercas-electricas.webp',
+            'alt' => 'Cercas electricas',
+        ],
+
     ],
     'logos' => [
         [

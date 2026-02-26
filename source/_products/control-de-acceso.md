@@ -1,0 +1,55 @@
+---
+extends: '_layouts.product'
+title: Control de Acceso
+headline: Soluciones Integrales de Control de Acceso
+sub: Desde lectores biométricos hasta barreras vehiculares, nuestras soluciones regulan y registran el acceso de personas y vehículos en instalaciones de cualquier tamaño.
+photo: control-de-acceso.webp
+categories:
+    - title: Controladoras de Acceso
+      description: "Unidades centrales que gestionan usuarios, horarios y niveles de acceso para uno o múltiples puntos de control."
+      icon: cpu
+    - title: Lectores Biométricos
+      description: "Lectores de huella dactilar, reconocimiento facial y venas del dedo para una identificación segura y sin contacto."
+      icon: fingerprint
+    - title: Lectores de Tarjeta y Proximidad
+      description: "Lectores RFID, NFC y de banda magnética compatibles con tarjetas y llaveros para un acceso rápido y gestionable."
+      icon: credit-card
+    - title: Teclados y PIN
+      description: "Teclados numéricos y combinados con lector de tarjeta para autenticación por código en entradas de bajo a medio tráfico."
+      icon: keyboard
+    - title: Cerraduras Electrónicas
+      description: "Cerraduras magnéticas, eléctricas y electromecánicas para puertas de madera, vidrio y metal con control desde la central."
+      icon: lock
+    - title: Torniquetes y Molinetes
+      description: "Torniquetes de media altura, molinetes y portillos de acceso para regular el flujo de personas en entornos de alto tráfico."
+      icon: rotate-cw
+    - title: Barreras Vehiculares
+      description: "Plumas, bolardos y barreras automatizadas para controlar el acceso de vehículos en parkings, naves y urbanizaciones."
+      icon: car
+    - title: Software de Gestión
+      description: "Plataformas para administrar usuarios, generar reportes de accesos y configurar horarios y zonas desde un panel centralizado."
+      icon: monitor
+    - title: Intercomunicadores y Videoporteros
+      description: "Sistemas de intercomunicación con audio y vídeo para verificar la identidad del visitante antes de autorizar el acceso."
+      icon: phone
+    - title: Integración con Nómina
+      description: "Módulos de control de asistencia y presencia que sincronizan los registros de acceso con sistemas de recursos humanos."
+      icon: users
+    - title: Alimentación y Baterías
+      description: "Fuentes de alimentación reguladas y baterías de respaldo para garantizar la operatividad del sistema ante fallos eléctricos."
+      icon: battery
+    - title: Accesorios
+      description: "Botones de salida, sensores de puerta abierta, cableado y herrajes para una instalación completa y profesional."
+      icon: package
+brands:
+    - alt: Dahua
+      src: /assets/images/SVG/dahua.svg
+    - alt: Ajax
+      src: /assets/images/SVG/ajax.svg
+    - alt: DSC
+      src: /assets/images/SVG/dsc.svg
+    - alt: Enson
+      src: /assets/images/SVG/enson.svg
+
+---
+Somos su aliado estratégico en la distribución de sistemas de control de acceso. Ofrecemos un catálogo completo de controladoras, lectores y accesorios con stock inmediato, respaldados por las marcas líderes del sector y asesoría técnica especializada para cada proyecto.

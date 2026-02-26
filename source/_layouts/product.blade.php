@@ -11,7 +11,7 @@
     <div class="w-full max-w-3xl">
         <div class="">
             <div class="h-96 flex items-center justify-center">
-                <img src="/assets/images/videovigilancia.png" alt="Videovigilancia" class="w-full h-full object-contain">
+                <img src="/assets/images/{{ $page->photo }}" alt="Videovigilancia" class="w-full h-full object-contain">
             </div>
         </div>    
     </div>
