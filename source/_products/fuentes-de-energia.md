@@ -1,6 +1,7 @@
 ---
 extends: '_layouts.product'
 title: Fuentes de Energía
+order: 6
 headline: Soluciones Profesionales de Alimentación y Respaldo Energético
 sub: Desde UPS industriales hasta paneles solares, nuestras soluciones garantizan la continuidad operativa de cualquier sistema de seguridad o red ante cortes y variaciones del suministro eléctrico.
 photo: fuentes-de-energia.webp
@@ -42,14 +43,8 @@ categories:
       description: "Cables, conectores, fusibles, protectores de sobretensión y material auxiliar para una instalación eléctrica segura y eficiente."
       icon: package
 brands:
-    - alt: Enson
-      src: /assets/images/SVG/enson.svg
-    - alt: DSC
-      src: /assets/images/SVG/dsc.svg
-    - alt: Ajax
-      src: /assets/images/SVG/ajax.svg
-    - alt: Dahua
-      src: /assets/images/SVG/dahua.svg
+    - alt: Saxxon
+      src: /assets/images/SVG/saxxon.svg
 
 ---
 Somos su aliado estratégico en la distribución de soluciones de alimentación y respaldo energético. Ofrecemos un catálogo completo de UPS, baterías, fuentes y accesorios con stock inmediato, respaldados por las marcas líderes del sector y asesoría técnica especializada para cada proyecto.

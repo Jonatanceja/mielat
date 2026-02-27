@@ -1,6 +1,7 @@
 ---
 extends: '_layouts.product'
 title: Control de Acceso
+order: 3
 headline: Soluciones Integrales de Control de Acceso
 sub: Desde lectores biométricos hasta barreras vehiculares, nuestras soluciones regulan y registran el acceso de personas y vehículos en instalaciones de cualquier tamaño.
 photo: control-de-acceso.webp
@@ -43,13 +44,9 @@ categories:
       icon: package
 brands:
     - alt: Dahua
-      src: /assets/images/SVG/dahua.svg
+      src: /assets/images/SVG/firelite.svg
     - alt: Ajax
-      src: /assets/images/SVG/ajax.svg
-    - alt: DSC
-      src: /assets/images/SVG/dsc.svg
-    - alt: Enson
-      src: /assets/images/SVG/enson.svg
+      src: /assets/images/SVG/zkteco.svg
 
 ---
 Somos su aliado estratégico en la distribución de sistemas de control de acceso. Ofrecemos un catálogo completo de controladoras, lectores y accesorios con stock inmediato, respaldados por las marcas líderes del sector y asesoría técnica especializada para cada proyecto.

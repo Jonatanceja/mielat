@@ -21,9 +21,9 @@
 </section>
 <section class="mt-14">
     <p class="py-6 mt-14 text-center">Calidad Garantizada por las Mejores Marcas del Mercado</p>
-    <div class="flex flex-wrap justify-between max-sm:justify-center gap-10 max-w-4xl w-full mx-auto py-4" id="logo-container">
+    <div class="flex flex-wrap justify-center gap-10 max-w-4xl w-full mx-auto py-4" id="logo-container">
         @foreach ($page->brands as $item)
-            <img src="{{ $item['src'] }}" alt="{{ $item['alt'] }}" class="h-7 w-auto max-w-xs" />
+            <img src="{{ $item['src'] }}" alt="{{ $item['alt'] }}" class="h-10 w-auto max-w-xs" />
         @endforeach
     </div>
 </section>

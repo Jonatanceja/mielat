@@ -8,7 +8,8 @@ return [
     'collections' => [
         'products' => [
             'path' => '/productos/{filename}',
-            'extends' => '_layouts.product',               
+            'extends' => '_layouts.product',
+            'sort' => 'order',
             ]
     ],
     'slider_images' => [
@@ -27,10 +28,6 @@ return [
         [
             'src' => '/assets/images/sistemas-de-incendios.webp',
             'alt' => 'Sistemas de incendios',
-        ],
-        [
-            'src' => '/assets/images/fuentes-de-energia.webp',
-            'alt' => 'Fuentes de energia',
         ],
         [
             'src' => '/assets/images/fuentes-de-energia.webp',

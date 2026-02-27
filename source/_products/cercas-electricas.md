@@ -1,6 +1,7 @@
 ---
 extends: '_layouts.product'
 title: Cercas Eléctricas
+order: 5
 headline: Sistemas Profesionales de Cercas Eléctricas
 sub: Desde energizadores de alto voltaje hasta kits de instalación completos, nuestras soluciones disuaden y detectan intrusiones en perímetros residenciales, comerciales e industriales.
 photo: cercas-electricas.webp
@@ -42,14 +43,8 @@ categories:
       description: "Material auxiliar de instalación como conductos, cajas de paso, herramientas y consumibles para proyectos de cualquier escala."
       icon: package
 brands:
-    - alt: Enson
-      src: /assets/images/SVG/enson.svg
-    - alt: DSC
-      src: /assets/images/SVG/dsc.svg
-    - alt: Ajax
-      src: /assets/images/SVG/ajax.svg
-    - alt: Dahua
-      src: /assets/images/SVG/dahua.svg
+    - alt: Yonusa
+      src: /assets/images/SVG/yonusa.svg
 
 ---
 Somos su aliado estratégico en la distribución de sistemas de cercas eléctricas. Ofrecemos un catálogo completo de energizadores, alambre y accesorios con stock inmediato, respaldados por las marcas líderes del sector y asesoría técnica especializada para cada proyecto perimetral.

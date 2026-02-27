@@ -1,6 +1,7 @@
 ---
 extends: '_layouts.product'
 title: Intrusión
+order: 2
 headline: Soluciones Profesionales de Detección de Intrusión
 sub: Desde paneles de alarma hasta detectores inalámbricos, nuestras soluciones protegen perímetros y espacios interiores con tecnología confiable y respuesta inmediata ante cualquier amenaza.
 photo: intrusion.webp
@@ -44,12 +45,10 @@ categories:
 brands:
     - alt: Ajax
       src: /assets/images/SVG/ajax.svg
-    - alt: Dahua
-      src: /assets/images/SVG/dahua.svg
-    - alt: Alarm.com
-      src: /assets/images/SVG/alarm.svg
-    - alt: Firelite
-      src: /assets/images/SVG/firelite.svg
+    - alt: DSC
+      src: /assets/images/SVG/dsc.svg
+    - alt: Trikdis
+      src: /assets/images/SVG/trikdis.svg
 
 ---
 Somos su aliado estratégico en la distribución de sistemas de detección de intrusión. Ofrecemos un catálogo completo de centrales, detectores y accesorios con stock inmediato, respaldados por las marcas líderes del sector y asesoría técnica especializada para cada proyecto.

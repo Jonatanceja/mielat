@@ -1,6 +1,7 @@
 ---
 extends: '_layouts.product'
 title: Videovigilancia
+order: 1
 headline: Soluciones Avanzadas de Videovigilancia IP
 sub: Desde cámaras térmicas hasta reconocimiento facial, nuestras soluciones garantizan evidencia nítida y una gestión eficiente de la seguridad perimetral para empresas y comercios.
 photo: videovigilancia.webp
@@ -51,13 +52,9 @@ brands:
     - alt: Dahua
       src: /assets/images/SVG/dahua.svg
     - alt: Ajax
-      src: /assets/images/SVG/ajax.svg
+      src: /assets/images/SVG/saxxon.svg
     - alt: Alarm.com
-      src: /assets/images/SVG/alarm.svg
-    - alt: Enson
-      src: /assets/images/SVG/enson.svg
-    - alt: Firelite
-      src: /assets/images/SVG/firelite.svg
+      src: /assets/images/SVG/imou.svg
 
 ---
 Somos su aliado estratégico en la distribución de tecnología de punta. Ofrecemos un catálogo integral de cámaras, NVRs y accesorios con stock inmediato, garantizando que su proyecto de videovigilancia cuente con el respaldo de las marcas líderes y asesoría técnica especializada en cada equipo.

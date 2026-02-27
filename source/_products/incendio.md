@@ -1,6 +1,7 @@
 ---
 extends: '_layouts.product'
 title: Sistemas de Incendio
+order: 4
 headline: Soluciones Profesionales de Detección y Extinción de Incendios
 sub: Desde paneles de detección hasta sistemas de extinción automática, nuestras soluciones protegen vidas e instalaciones con tecnología certificada y respuesta inmediata ante cualquier conato de incendio.
 photo: sistemas-de-incendios.webp
@@ -44,12 +45,8 @@ categories:
 brands:
     - alt: Firelite
       src: /assets/images/SVG/firelite.svg
-    - alt: DSC
-      src: /assets/images/SVG/dsc.svg
-    - alt: Dahua
-      src: /assets/images/SVG/dahua.svg
-    - alt: Enson
-      src: /assets/images/SVG/enson.svg
+    - alt: System Sensor
+      src: /assets/images/SVG/system-sensor.svg
 
 ---
 Somos su aliado estratégico en la distribución de sistemas de detección y extinción de incendios. Ofrecemos un catálogo completo de paneles, detectores y accesorios con stock inmediato, respaldados por las marcas líderes del sector y asesoría técnica especializada para cada proyecto.
