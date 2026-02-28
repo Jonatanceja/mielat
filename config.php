@@ -41,24 +41,52 @@ return [
     ],
     'logos' => [
         [
-            'src' => '/assets/images/svg/dahua.svg',
+            'src' => '/assets/images/SVG/dahua.svg',
             'alt' => 'Dahua Technology',
         ],
         [
-            'src' => '/assets/images/svg/ajax.svg',
+            'src' => '/assets/images/SVG/ajax.svg',
             'alt' => 'Ajax Security',
         ],
         [
-            'src' => '/assets/images/svg/alarm.svg',
+            'src' => '/assets/images/SVG/alarm.svg',
             'alt' => 'Alarm.com',
         ],
         [
-            'src' => '/assets/images/svg/firelite.svg',
+            'src' => '/assets/images/SVG/firelite.svg',
             'alt' => 'Firelite',
         ],
         [
-            'src' => '/assets/images/svg/enson.svg',
+            'src' => '/assets/images/SVG/enson.svg',
             'alt' => 'Enson',
+        ],
+        [
+            'src' => '/assets/images/SVG/dsc.svg',
+            'alt' => 'DSC',
+        ],
+        [
+            'src' => '/assets/images/SVG/yonusa.svg',
+            'alt' => 'Yonusa',
+        ],
+        [
+            'src' => '/assets/images/SVG/saxxon.svg',
+            'alt' => 'Saxxon',
+        ],
+        [
+            'src' => '/assets/images/SVG/imou.svg',
+            'alt' => 'Imou',
+        ],
+        [
+            'src' => '/assets/images/SVG/trikdis.svg',
+            'alt' => 'Trikdis',
+        ],
+        [
+            'src' => '/assets/images/SVG/zkteco.svg',
+            'alt' => 'ZKTeco',
+        ],
+        [
+            'src' => '/assets/images/SVG/system-sensor.svg',
+            'alt' => 'System Sensor',
         ],
     ],
     'features' => [
