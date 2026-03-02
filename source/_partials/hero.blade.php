@@ -24,7 +24,7 @@
 </section>
 <section class="mt-14">
     <p class="py-6 mt-14 text-center">La confianza de integradores líderes en toda la región</p>
-    <div class="flex flex-wrap justify-between max-sm:justify-center gap-10 max-w-4xl w-full mx-auto py-4" id="logo-container">
+    <div class="flex flex-wrap justify-center gap-10 max-w-4xl w-full mx-auto py-4" id="logo-container">
         @foreach ($page->logos as $item)
             <img src="{{ $item['src'] }}" alt="{{ $item['alt'] }}" class="h-7 w-auto max-w-xs" />
         @endforeach

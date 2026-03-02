@@ -49,10 +49,6 @@ return [
             'alt' => 'Ajax Security',
         ],
         [
-            'src' => '/assets/images/SVG/alarm.svg',
-            'alt' => 'Alarm.com',
-        ],
-        [
             'src' => '/assets/images/SVG/firelite.svg',
             'alt' => 'Firelite',
         ],
