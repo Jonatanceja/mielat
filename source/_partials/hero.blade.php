@@ -10,12 +10,13 @@
             </div>
             @endforeach
         </div>
-        <!-- Paginación -->
-        <div class="swiper-pagination"></div>
+        <!-- Navegación -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 
-    <h1 class="text-center text-4xl/13 md:text-6xl/19 font-semibold tracking-tight max-w-4xl">Protección Inteligente para un Mundo Conectado</h1>
-    <p class="text-center text-gray-100 text-base/7 max-w-lg mt-6">Soluciones profesionales en videovigilancia, control de acceso, detección de incendios y seguridad perimetral. Tecnología que protege lo que más importa.</p>
+    <h1 class="text-center text-4xl/13 md:text-6xl/19 font-semibold tracking-tight max-w-5xl">Distribución mayorista de sistemas de seguridad y energía.</h1>
+    <p class="text-center text-gray-600 dark:text-gray-100 text-base/7 max-w-lg mt-6">Equipamos tus proyectos con tecnología de punta en control de acceso, cercas eléctricas, detección de incendio e intrusión. Impulsamos tu negocio con stock inmediato.</p>
     <div class="flex flex-col md:flex-row max-md:w-full items-center gap-4 md:gap-3 mt-6">
         <a href="#productos">
             <button class="btn max-md:w-full glass py-3">Ver productos</button>
@@ -23,10 +24,11 @@
     </div>
 </section>
 <section class="mt-14">
-    <p class="py-6 mt-14 text-center">La confianza de integradores líderes en toda la región</p>
+    <p class="py-6 mt-14 text-center">La confianza de instaladores y empresas de seguridad en toda la región</p>
     <div class="flex flex-wrap justify-center gap-10 max-w-4xl w-full mx-auto py-4" id="logo-container">
         @foreach ($page->logos as $item)
-            <img src="{{ $item['src'] }}" alt="{{ $item['alt'] }}" class="h-7 w-auto max-w-xs" />
+            <img src="{{ $item['src'] }}" alt="{{ $item['alt'] }}" class="h-7 w-auto max-w-xs hidden dark:block" />
+            <img src="{{ str_replace('/SVG/', '/SVG/dark/', $item['src']) }}" alt="{{ $item['alt'] }}" class="h-7 w-auto max-w-xs block dark:hidden" />
         @endforeach
     </div>
 </section>

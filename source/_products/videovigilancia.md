@@ -6,48 +6,28 @@ headline: Soluciones Avanzadas de Videovigilancia IP
 sub: Desde cámaras térmicas hasta reconocimiento facial, nuestras soluciones garantizan evidencia nítida y una gestión eficiente de la seguridad perimetral para empresas y comercios.
 photo: videovigilancia.webp
 categories:
-    - title: Almacenamiento en la nube
-      description: "Grabación y acceso remoto a imágenes desde cualquier dispositivo, sin necesidad de hardware local adicional."
-      icon: cloud
-    - title: Software
-      description: "Plataformas de gestión de vídeo (VMS) para visualizar, grabar y analizar cámaras de forma centralizada y escalable."
-      icon: monitor
-    - title: Almacenamiento IP
-      description: "Soluciones NAS y servidores dedicados para almacenar grandes volúmenes de grabación con alta disponibilidad y redundancia."
-      icon: hard-drive
-    - title: Videovigilancia Inteligente
-      description: "Sistemas con analítica de vídeo avanzada: detección de intrusos, conteo de personas, reconocimiento facial y alertas automáticas."
-      icon: eye
-    - title: Cámaras IP
-      description: "Cámaras de red en resoluciones desde Full HD hasta 4K, con visión nocturna y conectividad directa a la red LAN."
-      icon: camera
+    - title: Camaras IP
+      description: "Tecnología 4K y conectividad PoE para proyectos escalables. Máxima nitidez, analíticas inteligentes y acceso remoto total."
+      image: /videovigilancia/Videovigilancia_0005_Camaras-IP.webp
     - title: NVR's
-      description: "Grabadores de vídeo en red para gestionar y almacenar las imágenes de cámaras IP con interfaz intuitiva y acceso remoto."
-      icon: server
-    - title: Kits CCTV HD
-      description: "Paquetes completos de cámaras y grabador HD listos para instalar, ideales para pequeños comercios y viviendas."
-      icon: box
+      description: "Soporte Ultra HD, alimentación PoE y analíticas avanzadas. El centro de control escalable para sistemas de red profesionales."
+      image: /videovigilancia/Videovigilancia_0004_NVRs.webp
+    - title: Kits de CCTV HD
+      description: "Equipos completos de alta definición (1080p / 5MP) con tecnología Plug & Play. Incluyen grabador DVR, cámaras, cableado y fuente de poder."
+      image: /videovigilancia/Videovigilancia_0003_Kits-CCTV.webp
     - title: Monitores
-      description: "Pantallas y videowalls optimizados para visualización continua de cámaras en salas de control y puestos de seguridad."
-      icon: tv
-    - title: Móviles
-      description: "Soluciones portátiles y vehiculares para vigilancia en entornos en movimiento como flotas, trenes o eventos temporales."
-      icon: smartphone
-    - title: Cámaras CCTV HD
-      description: "Cámaras analógicas de alta definición HD-CVI, HD-TVI y AHD compatibles con instalaciones existentes de coaxial."
-      icon: aperture
+      description: "Monitores de resolución nítida, múltiples entradas de video y diseño optimizado para centros de monitoreo críticos."
+      image: /videovigilancia/Videovigilancia_0000_Monitores.webp
+    - title: Camaras CCTV HD
+      description: "Nuestras cámaras ofrecen resolución 1080p y 5MP con tecnología HDCVI/TurboHD, garantizando video en tiempo real sin latencia."
+      image: /videovigilancia/Videovigilancia_0002_DVR-HD.webp
     - title: DVR's HD
-      description: "Grabadores digitales para cámaras analógicas HD con múltiples canales, acceso remoto y almacenamiento en disco local."
-      icon: disc
-    - title: Video HDMI
-      description: "Distribuidores, matrices y extensores HDMI para llevar la señal de vídeo a monitores y pantallas sin pérdida de calidad."
-      icon: cable
-    - title: Servidores y software
-      description: "Infraestructura de servidor y licencias VMS para proyectos de gran envergadura que requieren alta capacidad de procesamiento."
-      icon: cpu
+      description: "Nuestros DVRs ofrecen compresión de video avanzada para maximizar el disco duro y soporte de resolución hasta 5MP/4K"
+      image: /videovigilancia/Videovigilancia_0004_NVRs.webp
     - title: Accesorios
-      description: "Soportes, carcasas, fuentes de alimentación y cableado para una instalación profesional y duradera de cualquier sistema."
-      icon: package
+      description: "Nuestros accesorios garantizan la conectividad y compatibilidad con las marcas lideres de la industria."
+      image: /videovigilancia/Videovigilancia_0001_Accesorios.webp
+
 brands:
     - alt: Dahua
       src: /assets/images/SVG/dahua.svg

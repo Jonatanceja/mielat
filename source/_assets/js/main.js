@@ -1,3 +1,142 @@
+// GSAP scroll animations
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const fade = (selector, options = {}) => {
+        gsap.utils.toArray(selector).forEach(el => {
+            gsap.from(el, {
+                opacity: 0,
+                y: options.y ?? 24,
+                duration: options.duration ?? 0.7,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 88%',
+                    toggleActions: 'play none none none',
+                },
+                ...options.extra,
+            });
+        });
+    };
+
+    // Hero
+    fade('h1', { y: 32, duration: 0.9 });
+    fade('h1 + p', { y: 20, duration: 0.8, extra: { delay: 0.1 } });
+
+    // Section headings
+    fade('h2', { y: 20 });
+    fade('h2 + p, h2 ~ p', { y: 16, extra: { delay: 0.08 } });
+
+    // Cards — stagger within each flex/grid container
+    document.querySelectorAll('.flex.flex-wrap, .grid').forEach(container => {
+        const cards = container.querySelectorAll('.glass');
+        if (cards.length > 1) {
+            gsap.from(cards, {
+                opacity: 0,
+                y: 28,
+                duration: 0.6,
+                ease: 'power2.out',
+                stagger: 0.1,
+                scrollTrigger: {
+                    trigger: container,
+                    start: 'top 88%',
+                    toggleActions: 'play none none none',
+                },
+            });
+        }
+    });
+
+    // Standalone glass cards not in a group (exclude CTA which has its own animation)
+    fade('.glass:not(.flex .glass):not(.grid .glass):not([data-gsap="cta"])', { y: 20 });
+
+    // Logo strips — staggered
+    document.querySelectorAll('#logo-container').forEach(container => {
+        const logos = container.querySelectorAll('img');
+        if (logos.length) {
+            gsap.from(logos, {
+                opacity: 0,
+                y: 12,
+                duration: 0.5,
+                ease: 'power2.out',
+                stagger: 0.06,
+                scrollTrigger: {
+                    trigger: container,
+                    start: 'top 88%',
+                    toggleActions: 'play none none none',
+                },
+            });
+        }
+    });
+
+    // CTA blocks
+    document.querySelectorAll('[data-gsap="cta"]').forEach(el => {
+        gsap.from(el, {
+            opacity: 0,
+            y: 28,
+            duration: 0.8,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 88%',
+                toggleActions: 'play none none none',
+            },
+        });
+    });
+
+    // Workflow / history images (exclude logo strip imgs which have their own stagger animation)
+    fade('section img:not(#logo-container img)', { y: 20, duration: 0.7 });
+
+    // Timeline items (nosotros)
+    fade('.relative.flex.items-center', { y: 20, duration: 0.65, extra: { stagger: 0.12 } });
+});
+
+// Dark mode — cycles: system → light → dark
+const html = document.documentElement;
+const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+const themes = ['system', 'light', 'dark'];
+
+function applyTheme(theme) {
+    if (theme === 'dark' || (theme === 'system' && systemDark.matches)) {
+        html.classList.add('dark');
+    } else {
+        html.classList.remove('dark');
+    }
+    updateThemeIcon(theme);
+}
+
+const themeIconMap = { system: 'system', light: 'sun', dark: 'moon' };
+
+function updateThemeIcon(theme) {
+    const active = themeIconMap[theme];
+    ['system', 'sun', 'moon'].forEach(icon => {
+        document.getElementById(`icon-${icon}`)?.classList.toggle('hidden', icon !== active);
+        document.getElementById(`icon-${icon}-mobile`)?.classList.toggle('hidden', icon !== active);
+    });
+}
+
+function cycleTheme() {
+    const current = localStorage.getItem('theme') ?? 'system';
+    const next = themes[(themes.indexOf(current) + 1) % themes.length];
+    if (next === 'system') {
+        localStorage.removeItem('theme');
+    } else {
+        localStorage.setItem('theme', next);
+    }
+    applyTheme(next);
+}
+
+// Init
+const savedTheme = localStorage.getItem('theme') ?? 'system';
+applyTheme(savedTheme);
+
+// Listen for OS preference changes when in system mode
+systemDark.addEventListener('change', () => {
+    if (!localStorage.getItem('theme')) applyTheme('system');
+});
+
+document.getElementById('theme-toggle')?.addEventListener('click', cycleTheme);
+document.getElementById('theme-toggle-mobile')?.addEventListener('click', cycleTheme);
+
 const navbar = document.getElementById("navbar");
 const mobileMenu = document.getElementById("mobile-menu");
 const menuBtn = document.getElementById("menu-btn");

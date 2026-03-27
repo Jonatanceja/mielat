@@ -1,5 +1,5 @@
 <!-- Por qué elegirnos -->
-            <h3 class="text-4xl font-semibold text-white mb-6 text-center mt-40">¿Por Qué Elegirnos?</h3>
+            <h3 class="text-4xl font-semibold text-gray-900 dark:text-white mb-6 text-center mt-40">¿Por Qué Elegirnos?</h3>
             <div class="mt-8">
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="text-center glass rounded-2xl p-8 md:p-12">
@@ -9,8 +9,8 @@
                                 <circle cx="12" cy="8" r="6"></circle>
                             </svg>
                         </div>
-                        <h4 class="font-semibold text-white mb-2">Experiencia Comprobada</h4>
-                        <p class="text-gray-100 text-base/6">Años de trayectoria respaldando proyectos exitosos.</p>
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Experiencia Comprobada</h4>
+                        <p class="text-gray-600 dark:text-gray-100 text-base/6">Años de trayectoria respaldando proyectos exitosos.</p>
                     </div>
                     <div class="text-center glass rounded-2xl p-8 md:p-12">
                         <div class="flex flex-col justify-center items-center mb-4">
@@ -19,8 +19,8 @@
                                 <path d="M21 16v2a4 4 0 0 1-4 4h-5"></path>
                             </svg>
                         </div>
-                        <h4 class="font-semibold text-white mb-2">Soporte Técnico Experto</h4>
-                        <p class="text-gray-100 text-base/6">Asesoría personalizada antes, durante y después de la venta.</p>
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Soporte Técnico Experto</h4>
+                        <p class="text-gray-600 dark:text-gray-100 text-base/6">Asesoría personalizada antes, durante y después de la venta.</p>
                     </div>
                     <div class="text-center glass rounded-2xl p-8 md:p-12">
                         <div class="flex flex-col justify-center items-center mb-4">
@@ -32,8 +32,8 @@
                                 <line x1="12" x2="12" y1="22" y2="12"></line>
                             </svg>
                         </div>
-                        <h4 class="font-semibold text-white mb-2">Stock Disponible</h4>
-                        <p class="text-gray-100 text-base/6">Inventario amplio y entrega inmediata de productos.</p>
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Stock Disponible</h4>
+                        <p class="text-gray-600 dark:text-gray-100 text-base/6">Inventario amplio y entrega inmediata de productos.</p>
                     </div>
                 </div>
             </div>

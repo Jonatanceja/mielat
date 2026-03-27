@@ -8,40 +8,40 @@ photo: intrusion.webp
 categories:
     - title: Centrales de Alarma
       description: "Paneles de control cableados e inalámbricos para gestionar zonas, usuarios y eventos de seguridad desde un único punto."
-      icon: shield-alert
+      image: /intrusion/Intrusion_0011_Centrales-de-alarma.webp
     - title: Detectores de Movimiento
       description: "Sensores PIR, duales y de cortina para detectar presencia en interiores con mínima tasa de falsas alarmas."
-      icon: activity
+      image: /intrusion/Intrusion_0010_Detectores-de-movimiento.webp
     - title: Sensores de Apertura
       description: "Contactos magnéticos para puertas y ventanas que alertan de accesos no autorizados en tiempo real."
-      icon: door-open
+      image: /intrusion/Intrusion_0009_Sensores-de-apertura.webp
     - title: Detectores Perimetrales
       description: "Barreras infrarrojas y detectores exteriores diseñados para proteger el perímetro antes de que se produzca la intrusión."
-      icon: scan
+      image: /intrusion/Intrusion_0008_Detectores-perimetrales.webp
     - title: Sirenas y Avisadores
       description: "Sirenas interiores y exteriores con señal acústica y luminosa de alta potencia para disuadir y alertar ante una alarma."
-      icon: bell
+      image: /intrusion/Intrusion_0007_sirenas.webp
     - title: Comunicadores
       description: "Módulos GSM, IP y de doble vía para transmitir eventos a la central receptora de alarmas o al usuario final."
-      icon: radio
+      image: /intrusion/Intrusion_0006_Comunicadores.webp
     - title: Teclados y Mandos
       description: "Teclados LCD, táctiles y mandos a distancia para armar, desarmar y consultar el estado del sistema cómodamente."
-      icon: keyboard
+      image: /intrusion/Intrusion_0005_Teclaos-y-mandos.webp
     - title: Detectores de Humo y Gas
       description: "Sensores de humo ópticos y detectores de gas para complementar la seguridad ante incendios y fugas en el mismo sistema."
-      icon: wind
+      image: /intrusion/Intrusion_0004_alarmas-de-humo.webp
     - title: Sistemas Inalámbricos
       description: "Kits y expansiones radio-frecuencia para instalaciones sin cableado, ideales en reformas o espacios de difícil acceso."
-      icon: wifi
+      image: /intrusion/Intrusion_0003_Sistemas-inalambricos.webp
     - title: Fuentes de Alimentación
       description: "Fuentes conmutadas y baterías de respaldo que garantizan el funcionamiento del sistema ante cortes de suministro eléctrico."
-      icon: plug
+      image: /intrusion/Intrusion_0002_Fuentes-de-alimentacion.webp
     - title: Expansores y Módulos
       description: "Módulos de expansión de zonas, salidas y bus para ampliar cualquier central de alarma según las necesidades del proyecto."
-      icon: circuit-board
+      image: /intrusion/Intrusion_0001_Expansores-y-modulos.webp
     - title: Accesorios
       description: "Carcasas, cableado, soportes y material auxiliar para una instalación ordenada y profesional de cualquier sistema de intrusión."
-      icon: package
+      image: /intrusion/Intrusion_0000_Accesorios.webp
 brands:
     - alt: Ajax
       src: /assets/images/SVG/ajax.svg

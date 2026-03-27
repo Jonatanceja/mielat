@@ -9,8 +9,8 @@
                                 <circle cx="12" cy="12" r="2"></circle>
                             </svg>
                         <div>
-                            <h3 class="text-xl font-semibold text-white mb-3">Nuestra Misión</h3>
-                            <p class="text-gray-100 text-base/7">Ofrecer a nuestros clientes soluciones reales a sus problemas cotidianos, mejorando su entorno con nuestra experiencia y conocimiento.</p>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Nuestra Misión</h3>
+                            <p class="text-gray-600 dark:text-gray-100 text-base/7">Ofrecer a nuestros clientes soluciones reales a sus problemas cotidianos, mejorando su entorno con nuestra experiencia y conocimiento.</p>
                         </div>
                     </div>
                 </div>
@@ -22,8 +22,8 @@
                                 <circle cx="12" cy="12" r="3"></circle>
                             </svg>
                         <div>
-                            <h3 class="text-xl font-semibold text-white mb-3">Nuestra Visión</h3>
-                            <p class="text-gray-100 text-base/7">Posicionarnos en la mente de nuestros consumidores como la primera opción en sus proyectos de TI</p>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Nuestra Visión</h3>
+                            <p class="text-gray-600 dark:text-gray-100 text-base/7">Posicionarnos en la mente de nuestros consumidores como la primera opción en sus proyectos de TI</p>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                             <path d="m15 18-2-2"></path>
                         </svg>
                     <div>
-                        <h3 class="text-2xl font-semibold text-white mb-6">Nuestros Valores</h3>
+                        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Nuestros Valores</h3>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="flex items-start gap-3">
                                 <div class="glass rounded-full p-2 mt-1">
@@ -47,8 +47,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-1">Compromiso</h4>
-                                    <p class="text-gray-100 text-base/6">Con la calidad y satisfacción de nuestros clientes.</p>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Compromiso</h4>
+                                    <p class="text-gray-600 dark:text-gray-100 text-base/6">Con la calidad y satisfacción de nuestros clientes.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
@@ -58,8 +58,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-1">Confianza</h4>
-                                    <p class="text-gray-100 text-base/6">Construyendo relaciones duraderas y transparentes.</p>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Confianza</h4>
+                                    <p class="text-gray-600 dark:text-gray-100 text-base/6">Construyendo relaciones duraderas y transparentes.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
@@ -69,8 +69,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-1">Excelencia</h4>
-                                    <p class="text-gray-100 text-base/6">En cada producto y servicio que ofrecemos.</p>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Excelencia</h4>
+                                    <p class="text-gray-600 dark:text-gray-100 text-base/6">En cada producto y servicio que ofrecemos.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
@@ -80,8 +80,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-1">Innovación</h4>
-                                    <p class="text-gray-100 text-base/6">Manteniéndonos a la vanguardia tecnológica.</p>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Innovación</h4>
+                                    <p class="text-gray-600 dark:text-gray-100 text-base/6">Manteniéndonos a la vanguardia tecnológica.</p>
                                 </div>
                             </div>
                         </div>
