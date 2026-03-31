@@ -6,7 +6,7 @@
     <div class="flex flex-wrap items-start justify-center gap-x-6 gap-y-24 mt-10 px-6 max-w-6xl mx-auto pt-20">
         @foreach($page->features as $feature)
         <div class="hover:-translate-y-0.5 transition duration-300 max-w-80 w-full relative">
-            <img src="{{ $feature['image'] }}" alt="{{ $feature['title'] }}" class="absolute -top-[72px] left-1/2 -translate-x-1/2 h-36 object-contain z-10">
+            <img src="{{ $feature['image'] }}" alt="{{ $feature['title'] }}" class="absolute -top-[72px] inset-x-0 mx-auto h-36 object-contain z-10">
             <div class="glass rounded-xl px-6 pt-20 pb-6 space-y-2">
             <h3 class="text-base font-medium text-gray-900 dark:text-white">{{ $feature['title'] }}</h3>
             <p class="text-gray-600 dark:text-gray-100 line-clamp-3 pb-1">{{ $feature['description'] }}</p>

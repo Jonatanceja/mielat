@@ -11,7 +11,7 @@
     <div class="w-full max-w-3xl">
         <div class="">
             <div class="h-96 flex items-center justify-center">
-                <img src="/assets/images/{{ $page->photo }}" alt="Videovigilancia" class="w-full h-full object-contain">
+                <img src="/assets/images/{{ $page->photo }}" alt="{{ $page->headline }}" class="max-h-full max-w-full object-contain mx-auto">
             </div>
         </div>    
     </div>
@@ -38,7 +38,7 @@
     <div class="flex flex-wrap items-start justify-center gap-x-6 gap-y-24 mt-10 px-6 pt-20">
         @foreach ($page->categories as $category)
             <div class="hover:-translate-y-0.5 transition duration-300 max-w-80 w-full relative">
-                <img src="/assets/images{{ $category['image'] }}" alt="{{ $category['title'] }}" class="absolute -top-[72px] left-1/2 -translate-x-1/2 h-36 max-w-3/4 object-contain z-10 pb-2">
+                <img src="/assets/images{{ $category['image'] }}" alt="{{ $category['title'] }}" class="absolute -top-[72px] inset-x-0 mx-auto h-36 object-contain z-10">
                 <div class="glass rounded-xl px-6 pt-20 pb-6 space-y-2">
                     <h3 class="text-base font-medium text-gray-900 dark:text-white">{{ $category['title'] }}</h3>
                     <p class="text-gray-600 dark:text-gray-100 line-clamp-3 pb-1">{{ $category['description'] }}</p>
