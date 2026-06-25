@@ -5,6 +5,7 @@ order: 5
 headline: Sistemas Profesionales de Cercas Eléctricas
 sub: Desde energizadores de alto voltaje hasta kits de instalación completos, nuestras soluciones disuaden y detectan intrusiones en perímetros residenciales, comerciales e industriales.
 photo: cercas-electricas.webp
+og_image: cercas-electricas.webp
 categories:
     - title: Energizadores
       description: "Unidades de alto voltaje para electrificar el perímetro con pulsos seguros y controlados, disponibles en versiones AC, DC y solar."

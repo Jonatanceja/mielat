@@ -5,6 +5,7 @@ order: 4
 headline: Soluciones Profesionales de Detección y Extinción de Incendios
 sub: Desde paneles de detección hasta sistemas de extinción automática, nuestras soluciones protegen vidas e instalaciones con tecnología certificada y respuesta inmediata ante cualquier conato de incendio.
 photo: sistemas-de-incendios.webp
+og_image: sistemas-de-incendios.webp
 categories:
     - title: Paneles de Detección
       description: "Centrales convencionales y analógico-direccionables para supervisar zonas, gestionar alarmas y coordinar la evacuación del edificio."

@@ -5,7 +5,7 @@
 @include('_partials.nav')
 @include('_partials.bg')
 
-<main class="px-4 max-w-3xl mx-auto mt-32 pb-40">
+<main id="main-content" class="px-4 max-w-3xl mx-auto mt-32 pb-40">
     <h1 class="text-4xl font-semibold text-gray-900 dark:text-white mb-4">Términos y Condiciones</h1>
     <p class="text-gray-500 dark:text-gray-400 text-sm mb-12">Última actualización: enero 2026</p>
 

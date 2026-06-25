@@ -1,61 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="canonical" href="/productos/incendio">
-        <meta name="description" content="Mayoristas de Integración Electrónica">
+        <link rel="canonical" href="https://mie.lat/productos/incendio">
+        <meta name="description" content="Mayoristas de Distribución Electrónica">
         <title>Sistemas de Incendio</title>
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://mie.lat/productos/incendio">
+        <meta property="og:title" content="Sistemas de Incendio">
+        <meta property="og:description" content="Mayoristas de Distribución Electrónica">
+        <meta property="og:image" content="https://mie.lat/assets/images/sistemas-de-incendios.webp">
+        <meta property="og:site_name" content="Mayoristas de Integración Electrónica">
+        <meta property="og:locale" content="es_MX">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Sistemas de Incendio">
+        <meta name="twitter:description" content="Mayoristas de Distribución Electrónica">
+        <meta name="twitter:image" content="https://mie.lat/assets/images/sistemas-de-incendios.webp">
+
         <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-                <link rel="stylesheet" href="/assets/build/assets/main-Dc-ypY3s.css">
-        <script defer type="module" src="/assets/build/assets/main-DWTNMzYe.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+                <link rel="stylesheet" href="/assets/build/assets/main-B8L37BdW.css">
+        <script defer type="module" src="/assets/build/assets/main-Xg5Hzbdq.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     </head>
     <body class="text-gray-900 font-sans antialiased">
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded focus:shadow-lg">Saltar al contenido principal</a>
         
-<nav id="navbar" class="sticky top-0 z-50 flex w-full items-center justify-between px-4 py-3.5 md:px-16 lg:px-24 transition-all duration-300">
-    <a href="/">
-        <img alt="logo" loading="lazy" width="205" height="48" decoding="async" data-nimg="1" class="h-14 w-auto" style="color: transparent" src="/assets/images/logo-mie.svg" />
+<nav id="navbar" class="sticky top-0 z-50 flex w-full items-center justify-between px-4 py-3.5 md:px-16 lg:px-24 transition-all duration-300" aria-label="Navegación principal">
+    <a href="/" aria-label="Mayoristas de Integración Electrónica – Inicio">
+        <img alt="Mayoristas de Integración Electrónica" loading="lazy" width="205" height="48" decoding="async" class="h-14 w-auto dark:block hidden" src="/assets/images/logo-mie.svg" />
+        <img alt="Mayoristas de Integración Electrónica" loading="lazy" width="205" height="48" decoding="async" class="h-14 w-auto dark:hidden block" src="/assets/images/logo-mie-dark.svg" />
     </a>
     <div class="hidden items-center space-x-10 md:flex">
-        <a class="transition hover:text-gray-300" href="/">Inicio</a>
-        <a class="transition hover:text-gray-300" href="/nosotros">Nosotros</a>
-        
+        <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/">Inicio</a>
+        <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/nosotros">Nosotros</a>
+
         <!-- Dropdown Productos -->
         <div class="relative group">
-            <button class="transition hover:text-gray-300 flex items-center gap-1">
+            <button
+                id="desktop-products-btn"
+                class="transition hover:text-gray-500 dark:hover:text-gray-300 flex items-center gap-1"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="desktop-products-menu"
+            >
                 Productos
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform group-hover:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform group-hover:rotate-180" aria-hidden="true">
                     <path d="m6 9 6 6 6-6"></path>
                 </svg>
             </button>
-            
+
             <!-- Dropdown Menu -->
-            <div class="absolute top-full left-0 mt-6 w-64 rounded-xl p-2 bg-gray-800 border border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg z-[999]">
-                                <a href="/productos/videovigilancia" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+            <div id="desktop-products-menu" role="menu" aria-labelledby="desktop-products-btn" class="absolute top-full left-0 mt-6 w-64 rounded-xl p-2 bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg z-[999]">
+                                <a href="/productos/videovigilancia" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Videovigilancia
                 </a>
-                                <a href="/productos/intrusion" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/intrusion" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Intrusión
                 </a>
-                                <a href="/productos/control-de-acceso" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/control-de-acceso" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Control de Acceso
                 </a>
-                                <a href="/productos/incendio" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/incendio" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Sistemas de Incendio
                 </a>
-                                <a href="/productos/cercas-electricas" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/cercas-electricas" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Cercas Eléctricas
                 </a>
-                                <a href="/productos/fuentes-de-energia" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/fuentes-de-energia" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Fuentes de Energía
                 </a>
                             </div>
         </div>
-        
+
+        <!-- Theme toggle -->
+        <button id="theme-toggle" class="transition hover:opacity-70 active:scale-90" aria-label="Cambiar tema">
+            <svg id="icon-system" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                <path d="M8 21h8M12 17v4"></path>
+            </svg>
+            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+        </button>
+
         <a class="btn glass" href="/contacto">Contacto</a>
     </div>
-    <button id="menu-btn" class="transition active:scale-90 md:hidden">
+    <button id="menu-btn" class="transition active:scale-90 md:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-6.5" aria-hidden="true">
             <path d="M4 5h16"></path>
             <path d="M4 12h16"></path>
@@ -65,213 +105,195 @@
 </nav>
 
 <!-- Mobile Menu -->
-<div id="mobile-menu" class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-black/20 text-lg font-medium backdrop-blur-2xl transition duration-300 md:hidden -translate-x-full">
-    <a class="transition hover:text-gray-300" href="/">Inicio</a>
-    <a class="transition hover:text-gray-300" href="/nosotros">Nosotros</a>
-    
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menú de navegación" aria-hidden="true" class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-white/90 dark:bg-black/20 text-lg font-medium backdrop-blur-2xl transition duration-300 md:hidden -translate-x-full">
+    <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/">Inicio</a>
+    <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/nosotros">Nosotros</a>
+
     <!-- Dropdown Mobile -->
     <div class="flex flex-col items-center gap-3">
-        <button id="mobile-products-btn" class="transition hover:text-gray-300 flex items-center gap-1">
+        <button
+            id="mobile-products-btn"
+            class="transition hover:text-gray-500 dark:hover:text-gray-300 flex items-center gap-1"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="mobile-products-menu"
+        >
             Productos
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform" id="mobile-chevron">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform" id="mobile-chevron" aria-hidden="true">
                 <path d="m6 9 6 6 6-6"></path>
             </svg>
         </button>
-        
+
         <div id="mobile-products-menu" class="hidden flex-col items-center gap-2 mt-2">
-                        <a href="/productos/videovigilancia" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/videovigilancia" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Videovigilancia
             </a>
-                        <a href="/productos/intrusion" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/intrusion" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Intrusión
             </a>
-                        <a href="/productos/control-de-acceso" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/control-de-acceso" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Control de Acceso
             </a>
-                        <a href="/productos/incendio" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/incendio" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Sistemas de Incendio
             </a>
-                        <a href="/productos/cercas-electricas" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/cercas-electricas" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Cercas Eléctricas
             </a>
-                        <a href="/productos/fuentes-de-energia" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/fuentes-de-energia" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Fuentes de Energía
             </a>
                     </div>
     </div>
-    
+
+    <!-- Theme toggle mobile -->
+    <button id="theme-toggle-mobile" class="transition hover:opacity-70 active:scale-90" aria-label="Cambiar tema">
+        <svg id="icon-system-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+            <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+            <path d="M8 21h8M12 17v4"></path>
+        </svg>
+        <svg id="icon-sun-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+        <svg id="icon-moon-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </svg>
+    </button>
+
     <a class="btn glass" href="/contacto">Contacto</a>
-    <button id="close-btn" class="rounded-md p-2 glass absolute top-5 right-2">
+    <button id="close-btn" class="rounded-md p-2 glass absolute top-5 right-2" aria-label="Cerrar menú">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true">
             <path d="M18 6 6 18"></path>
             <path d="m6 6 12 12"></path>
         </svg>
     </button>
-</div><div class="fixed inset-0 overflow-hidden -z-20 pointer-events-none">
-    <div class="absolute rounded-full top-80 left-2/5 -translate-x-1/2 size-130 bg-[#00b1ea] blur-[100px]"></div>
-    <div class="absolute rounded-full top-80 right-0 -translate-x-1/2 size-130 bg-[#2E08CF] blur-[100px]"></div>
-    <div class="absolute rounded-full top-0 left-1/2 -translate-x-1/2 size-130 bg-[#103857] blur-[100px]"></div>
+</div>
+<div class="fixed inset-0 overflow-hidden -z-20 pointer-events-none">
+    <div class="absolute rounded-full top-80 left-2/5 -translate-x-1/2 size-130 bg-[#00b1ea] blur-[100px] opacity-20 dark:opacity-100"></div>
+    <div class="absolute rounded-full top-80 right-0 -translate-x-1/2 size-130 bg-[#2E08CF] blur-[100px] opacity-15 dark:opacity-100"></div>
+    <div class="absolute rounded-full top-0 left-1/2 -translate-x-1/2 size-130 bg-[#103857] blur-[100px] opacity-20 dark:opacity-100"></div>
 </div>       
 
-<main class="px-4">
+<main id="main-content" class="px-4">
 <section class="flex flex-col items-center">
     <!-- Swiper Slider -->
     <div class="w-full max-w-3xl">
         <div class="">
             <div class="h-96 flex items-center justify-center">
-                <img src="/assets/images/sistemas-de-incendios.webp" alt="Videovigilancia" class="w-full h-full object-contain">
+                <img src="/assets/images/sistemas-de-incendios.webp" alt="Soluciones Profesionales de Detección y Extinción de Incendios" class="max-h-full max-w-full object-contain mx-auto">
             </div>
         </div>    
     </div>
 
     <h1 class="text-center text-4xl/13 md:text-6xl/19 font-semibold tracking-tight max-w-4xl">Soluciones Profesionales de Detección y Extinción de Incendios</h1>
-    <p class="text-center text-gray-100 text-base/7 max-w-lg mt-6">Desde paneles de detección hasta sistemas de extinción automática, nuestras soluciones protegen vidas e instalaciones con tecnología certificada y respuesta inmediata ante cualquier conato de incendio.</p>
+    <p class="text-center text-gray-600 dark:text-gray-100 text-base/7 max-w-lg mt-6">Desde paneles de detección hasta sistemas de extinción automática, nuestras soluciones protegen vidas e instalaciones con tecnología certificada y respuesta inmediata ante cualquier conato de incendio.</p>
 </section>
 <section class="mt-14">
     <p class="py-6 mt-14 text-center">Calidad Garantizada por las Mejores Marcas del Mercado</p>
     <div class="flex flex-wrap justify-center gap-10 max-w-4xl w-full mx-auto py-4" id="logo-container">
-                    <img src="/assets/images/SVG/firelite.svg" alt="Firelite" class="h-10 w-auto max-w-xs" />
-                    <img src="/assets/images/SVG/system-sensor.svg" alt="System Sensor" class="h-10 w-auto max-w-xs" />
+                    <img src="/assets/images/SVG/firelite.svg" alt="Firelite" class="h-10 w-auto max-w-xs hidden dark:block" />
+            <img src="/assets/images/SVG/dark/firelite.svg" alt="Firelite" class="h-10 w-auto max-w-xs block dark:hidden" />
+                    <img src="/assets/images/SVG/system-sensor.svg" alt="System Sensor" class="h-10 w-auto max-w-xs hidden dark:block" />
+            <img src="/assets/images/SVG/dark/system-sensor.svg" alt="System Sensor" class="h-10 w-auto max-w-xs block dark:hidden" />
             </div>
 </section>
 <section class="mt-32">
     <div class="text-center">
-        <h2 class="text-3xl font-semibold max-w-xl mx-auto mt-4 text-white">Nuestras soluciones para Sistemas de Sistemas de Incendio</h2>
-        <div class="mt-4 text-center text-base/7 text-gray-100 max-w-xl mx-auto">
+        <h2 class="text-3xl font-semibold max-w-xl mx-auto mt-4 text-gray-900 dark:text-white">Nuestras soluciones para Sistemas de Sistemas de Incendio</h2>
+        <div class="mt-4 text-center text-base/7 text-gray-600 dark:text-gray-100 max-w-xl mx-auto">
             <p>Somos su aliado estratégico en la distribución de sistemas de detección y extinción de incendios. Ofrecemos un catálogo completo de paneles, detectores y accesorios con stock inmediato, respaldados por las marcas líderes del sector y asesoría técnica especializada para cada proyecto.</p>
         </div>
     </div>
-    <div class="flex flex-wrap items-center justify-center gap-6 mt-10 px-6">
-                    <div class="hover:-translate-y-0.5 transition duration-300 p-6 rounded-xl space-y-4 glass max-w-80 w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu size-8.5" aria-hidden="true" >
-    <rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path>
-</svg>
-                <h3 class="text-base font-medium text-white">Paneles de Detección</h3>
-                <p class="text-gray-100 line-clamp-3 pb-1">Centrales convencionales y analógico-direccionables para supervisar zonas, gestionar alarmas y coordinar la evacuación del edificio.</p>
+    <div class="flex flex-wrap items-start justify-center gap-x-6 gap-y-24 mt-10 px-6 pt-20">
+                    <div class="hover:-translate-y-0.5 transition duration-300 max-w-80 w-full relative">
+                <img src="/assets/images/control-de-incendios/paneles-deteccion.webp" alt="Paneles de Detección" class="absolute -top-[72px] inset-x-0 mx-auto h-36 object-contain z-10">
+                <div class="glass rounded-xl px-6 pt-20 pb-6 space-y-2">
+                    <h3 class="text-base font-medium text-gray-900 dark:text-white">Paneles de Detección</h3>
+                    <p class="text-gray-600 dark:text-gray-100 line-clamp-3 pb-1">Centrales convencionales y analógico-direccionables para supervisar zonas, gestionar alarmas y coordinar la evacuación del edificio.</p>
+                </div>
             </div>
-                    <div class="hover:-translate-y-0.5 transition duration-300 p-6 rounded-xl space-y-4 glass max-w-80 w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud size-8.5" aria-hidden="true" >
-    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"></path>
-</svg>
-                <h3 class="text-base font-medium text-white">Detectores de Humo</h3>
-                <p class="text-gray-100 line-clamp-3 pb-1">Detectores ópticos, iónicos y de haz lineal para identificar la presencia de humo en fases tempranas del incendio.</p>
+                    <div class="hover:-translate-y-0.5 transition duration-300 max-w-80 w-full relative">
+                <img src="/assets/images/control-de-incendios/detectores-de-humo.webp" alt="Detectores de Humo" class="absolute -top-[72px] inset-x-0 mx-auto h-36 object-contain z-10">
+                <div class="glass rounded-xl px-6 pt-20 pb-6 space-y-2">
+                    <h3 class="text-base font-medium text-gray-900 dark:text-white">Detectores de Humo</h3>
+                    <p class="text-gray-600 dark:text-gray-100 line-clamp-3 pb-1">Detectores ópticos, iónicos y de haz lineal para identificar la presencia de humo en fases tempranas del incendio.</p>
+                </div>
             </div>
-                    <div class="hover:-translate-y-0.5 transition duration-300 p-6 rounded-xl space-y-4 glass max-w-80 w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thermometer size-8.5" aria-hidden="true" >
-    <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
-</svg>
-                <h3 class="text-base font-medium text-white">Detectores de Calor</h3>
-                <p class="text-gray-100 line-clamp-3 pb-1">Detectores termovelocimétricos y de temperatura fija para entornos con polvo o vapor donde los detectores de humo no son viables.</p>
+                    <div class="hover:-translate-y-0.5 transition duration-300 max-w-80 w-full relative">
+                <img src="/assets/images/control-de-incendios/detectores-de-calor.webp" alt="Detectores de Calor" class="absolute -top-[72px] inset-x-0 mx-auto h-36 object-contain z-10">
+                <div class="glass rounded-xl px-6 pt-20 pb-6 space-y-2">
+                    <h3 class="text-base font-medium text-gray-900 dark:text-white">Detectores de Calor</h3>
+                    <p class="text-gray-600 dark:text-gray-100 line-clamp-3 pb-1">Detectores termovelocimétricos y de temperatura fija para entornos con polvo o vapor donde los detectores de humo no son viables.</p>
+                </div>
             </div>
-                    <div class="hover:-translate-y-0.5 transition duration-300 p-6 rounded-xl space-y-4 glass max-w-80 w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame size-8.5" aria-hidden="true" >
-    <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
-</svg>
-                <h3 class="text-base font-medium text-white">Detectores de Llama</h3>
-                <p class="text-gray-100 line-clamp-3 pb-1">Detectores ópticos de llama por infrarrojos y ultravioleta para identificar fuego abierto en espacios abiertos o industriales.</p>
+                    <div class="hover:-translate-y-0.5 transition duration-300 max-w-80 w-full relative">
+                <img src="/assets/images/control-de-incendios/pulsadores-de-alarma.webp" alt="Pulsadores de Alarma" class="absolute -top-[72px] inset-x-0 mx-auto h-36 object-contain z-10">
+                <div class="glass rounded-xl px-6 pt-20 pb-6 space-y-2">
+                    <h3 class="text-base font-medium text-gray-900 dark:text-white">Pulsadores de Alarma</h3>
+                    <p class="text-gray-600 dark:text-gray-100 line-clamp-3 pb-1">Pulsadores manuales de alarma para que los ocupantes puedan activar la alerta de forma inmediata ante un incendio visible.</p>
+                </div>
             </div>
-                    <div class="hover:-translate-y-0.5 transition duration-300 p-6 rounded-xl space-y-4 glass max-w-80 w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand size-8.5" aria-hidden="true" >
-    <path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2"></path><path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2"></path><path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"></path><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
-</svg>
-                <h3 class="text-base font-medium text-white">Pulsadores de Alarma</h3>
-                <p class="text-gray-100 line-clamp-3 pb-1">Pulsadores manuales de alarma para que los ocupantes puedan activar la alerta de forma inmediata ante un incendio visible.</p>
-            </div>
-                    <div class="hover:-translate-y-0.5 transition duration-300 p-6 rounded-xl space-y-4 glass max-w-80 w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell size-8.5" aria-hidden="true" >
-    <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
-</svg>
-                <h3 class="text-base font-medium text-white">Sirenas y Avisadores</h3>
-                <p class="text-gray-100 line-clamp-3 pb-1">Sirenas acústicas y óptico-acústicas para alertar a los ocupantes del edificio y facilitar una evacuación rápida y ordenada.</p>
-            </div>
-                    <div class="hover:-translate-y-0.5 transition duration-300 p-6 rounded-xl space-y-4 glass max-w-80 w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplets size-8.5" aria-hidden="true" >
-    <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path>
-</svg>
-                <h3 class="text-base font-medium text-white">Sistemas de Extinción</h3>
-                <p class="text-gray-100 line-clamp-3 pb-1">Sistemas de rociadores automáticos, agentes limpios y CO₂ para suprimir el fuego de forma automática en zonas críticas.</p>
-            </div>
-                    <div class="hover:-translate-y-0.5 transition duration-300 p-6 rounded-xl space-y-4 glass max-w-80 w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-archive size-8.5" aria-hidden="true" >
-    <rect width="20" height="5" x="2" y="3" rx="1"></rect><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"></path><path d="M10 12h4"></path>
-</svg>
-                <h3 class="text-base font-medium text-white">Gabinetes y BIE</h3>
-                <p class="text-gray-100 line-clamp-3 pb-1">Bocas de incendio equipadas, gabinetes y mangueras para la intervención manual de primera y segunda mano en caso de incendio.</p>
-            </div>
-                    <div class="hover:-translate-y-0.5 transition duration-300 p-6 rounded-xl space-y-4 glass max-w-80 w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gauge size-8.5" aria-hidden="true" >
-    <path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path>
-</svg>
-                <h3 class="text-base font-medium text-white">Extintores</h3>
-                <p class="text-gray-100 line-clamp-3 pb-1">Extintores portátiles y de carro en diferentes agentes —polvo, CO₂, agua y espuma— para distintos tipos de fuego y entornos.</p>
-            </div>
-                    <div class="hover:-translate-y-0.5 transition duration-300 p-6 rounded-xl space-y-4 glass max-w-80 w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-radio size-8.5" aria-hidden="true" >
-    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.4"></path><circle cx="12" cy="12" r="2"></circle><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.4"></path><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
-</svg>
-                <h3 class="text-base font-medium text-white">Comunicadores y Monitoreo</h3>
-                <p class="text-gray-100 line-clamp-3 pb-1">Módulos de transmisión para enviar eventos de alarma a la central receptora y a los servicios de emergencia en tiempo real.</p>
-            </div>
-                    <div class="hover:-translate-y-0.5 transition duration-300 p-6 rounded-xl space-y-4 glass max-w-80 w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-door-open size-8.5" aria-hidden="true" >
-    <path d="M13 4h3a2 2 0 0 1 2 2v14"></path><path d="M2 20h3"></path><path d="M13 20h9"></path><path d="M10 12v.01"></path><path d="M13 4.562v16.157a1 1 0 0 1-1.397.913L4 18V4.562a2 2 0 0 1 1.334-1.886L12 1a1 1 0 0 1 1 1z"></path>
-</svg>
-                <h3 class="text-base font-medium text-white">Señalización de Evacuación</h3>
-                <p class="text-gray-100 line-clamp-3 pb-1">Carteles de emergencia, luces de señalización y alumbrado de evacuación para guiar a los ocupantes hacia las salidas de seguridad.</p>
-            </div>
-                    <div class="hover:-translate-y-0.5 transition duration-300 p-6 rounded-xl space-y-4 glass max-w-80 w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package size-8.5" aria-hidden="true" >
-    <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"></path><path d="m7.5 4.27 9 5.15"></path>
-</svg>
-                <h3 class="text-base font-medium text-white">Accesorios</h3>
-                <p class="text-gray-100 line-clamp-3 pb-1">Bases, zócalos, módulos de entrada y salida, cableado resistente al fuego y accesorios de instalación para cualquier proyecto.</p>
+                    <div class="hover:-translate-y-0.5 transition duration-300 max-w-80 w-full relative">
+                <img src="/assets/images/control-de-incendios/sirenas.webp" alt="Sirenas y Avisadores" class="absolute -top-[72px] inset-x-0 mx-auto h-36 object-contain z-10">
+                <div class="glass rounded-xl px-6 pt-20 pb-6 space-y-2">
+                    <h3 class="text-base font-medium text-gray-900 dark:text-white">Sirenas y Avisadores</h3>
+                    <p class="text-gray-600 dark:text-gray-100 line-clamp-3 pb-1">Sirenas acústicas y óptico-acústicas para alertar a los ocupantes del edificio y facilitar una evacuación rápida y ordenada.</p>
+                </div>
             </div>
             </div>
 </section>
-<div class="flex flex-col max-w-5xl px-4 mt-40 mx-auto items-center justify-center text-center py-16 rounded-xl glass">
-    <h2 class="text-2xl md:text-4xl font-medium mt-2">Todo lo que su de proyecto de Sistemas de Incendio requiere para una integración exitosa.</h2>
-    <p class="mt-4 text-sm/7 max-w-md">Contáctanos hoy y descubre cómo podemos ayudarte a encontrar las soluciones de seguridad perfectas para tus necesidades.</p>
-    <div class="flex flex-col md:flex-row items-center gap-4 mt-8">
-        <button class="btn glass flex items-center gap-2">
-            Solicitar Cotización
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4" aria-hidden="true">
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-            </svg>
-        </button>
-        <button class="btn bg-white/10 hover:bg-white/20 flex items-center gap-2 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone size-4" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            Contactar Asesor
-        </button>
+<div data-gsap="cta" class="max-w-5xl px-4 mt-40 mx-auto rounded-xl glass overflow-hidden">
+    <div class="flex flex-col md:flex-row items-center">
+        <div class="flex-1 px-8 py-16 text-center md:text-left">
+            <h2 class="text-2xl md:text-4xl font-medium mt-2">Todo lo que su proyecto de Sistemas de Incendio requiere para una instalación exitosa.</h2>
+            <p class="mt-4 text-sm/7 max-w-md">Contáctanos hoy y descubre cómo podemos ayudarte a encontrar las soluciones de seguridad perfectas para tus necesidades.</p>
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-4 mt-8">
+                <button class="btn glass flex items-center gap-2">
+                    Solicitar Cotización
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4" aria-hidden="true">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </button>
+                <button class="btn bg-white/10 hover:bg-white/20 flex items-center gap-2 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone size-4" aria-hidden="true">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    Contactar Asesor
+                </button>
+            </div>
+        </div>
+        <div class="hidden md:block w-80">
+            <img src="/assets/images/sistemas-de-incendios.webp" alt="Sistemas de Incendio" class="w-full h-full">
+        </div>
     </div>
 </div>
 </main>
-<footer class="flex flex-col items-center px-4 md:px-16 lg:px-24 justify-center w-full pt-16 mt-40 glass border-0">
-            <a href="/">
-                <img alt="logo" loading="lazy" width="205" height="48" decoding="async" data-nimg="1" class="h-12 w-auto" style="color: transparent" src="/assets/images/logo-mie.svg" />
+<footer class="flex flex-col items-center px-4 md:px-16 lg:px-24 justify-center w-full pt-16 mt-40 glass border-0" aria-label="Pie de página">
+            <a href="/" aria-label="Mayoristas de Integración Electrónica – Inicio">
+                <img alt="Mayoristas de Integración Electrónica" loading="lazy" width="205" height="48" decoding="async" class="h-12 w-auto hidden dark:block" src="/assets/images/logo-mie.svg" />
+                <img alt="Mayoristas de Integración Electrónica" loading="lazy" width="205" height="48" decoding="async" class="h-12 w-auto block dark:hidden" src="/assets/images/logo-mie-dark.svg" />
             </a>
-            <div class="flex flex-wrap items-center justify-center gap-8 py-8">
-                <a class="transition hover:text-gray-300" href="#terms-of-service">Términos y condiciones</a>
-                <a class="transition hover:text-gray-300" href="#privacy-policy">Política de Prvacidad</a>
-                <a class="transition hover:text-gray-300" href="#sitemap">Mapa de sitio</a>
-            </div>
+            <nav aria-label="Navegación legal" class="flex flex-wrap items-center justify-center gap-8 py-8">
+                <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/terminos-y-condiciones">Términos y condiciones</a>
+                <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/politica-de-privacidad">Política de Privacidad</a>
+            </nav>
             <div class="flex items-center gap-6 pb-6">
-                <a href="https://www.facebook.com/mayoristas.de.integracion.electronica" class="hover:-translate-y-0.5 text-gray-200 transition-all duration-300">
+                <a href="https://www.facebook.com/mayoristas.de.integracion.electronica" class="hover:-translate-y-0.5 text-gray-500 dark:text-gray-200 transition-all duration-300" aria-label="Facebook de Mayoristas de Integración Electrónica" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook size-8.5" aria-hidden="true" class="h-5">
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
 </svg>
                 </a>
-                <a href="https://www.linkedin.com/company/mayoristas-de-integraci%C3%B3n-electr%C3%B3nica/?originalSubdomain=mx" class="hover:-translate-y-0.5 text-gray-200 transition-all duration-300">
+                <a href="https://www.linkedin.com/company/mayoristas-de-integraci%C3%B3n-electr%C3%B3nica/?originalSubdomain=mx" class="hover:-translate-y-0.5 text-gray-500 dark:text-gray-200 transition-all duration-300" aria-label="LinkedIn de Mayoristas de Integración Electrónica" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin size-8.5" aria-hidden="true" class="h-5">
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle>
 </svg>
                 </a>
             </div>
-            <hr class="w-full border-white/20 mt-6" />
+            <hr class="w-full border-black/10 dark:border-white/20 mt-6" />
             <div class="flex flex-col md:flex-row items-center w-full justify-center gap-4 py-4">
-                <p>Todos los derechos reservados © 2026 <strong>Mayoristas de Integración electrónica</strong></p>
+                <p>Todos los derechos reservados © 2026 <strong>Mayoristas de Distribución Electrónica</strong></p>
             </div>
         </footer>
     </body>

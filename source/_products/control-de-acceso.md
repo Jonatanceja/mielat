@@ -5,6 +5,7 @@ order: 3
 headline: Soluciones Completas de Control de Acceso
 sub: Desde lectores biométricos hasta barreras vehiculares, nuestras soluciones regulan y registran el acceso de personas y vehículos en instalaciones de cualquier tamaño.
 photo: control-de-acceso.webp
+og_image: control-de-acceso.webp
 categories:
     - title: Controladoras de Acceso
       description: "Unidades centrales que gestionan usuarios, horarios y niveles de acceso para uno o múltiples puntos de control."

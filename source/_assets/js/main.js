@@ -1,3 +1,21 @@
+import Swiper from 'swiper';
+import { Navigation, Autoplay } from 'swiper/modules';
+
+// Swiper
+new Swiper('.mySwiper', {
+    modules: [Navigation, Autoplay],
+    loop: true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    speed: 800,
+});
+
 // GSAP scroll animations
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
@@ -160,11 +178,17 @@ document.addEventListener("DOMContentLoaded", () => {
 menuBtn.addEventListener("click", () => {
     mobileMenu.classList.remove("-translate-x-full");
     mobileMenu.classList.add("translate-x-0");
+    menuBtn.setAttribute("aria-expanded", "true");
+    mobileMenu.setAttribute("aria-hidden", "false");
+    closeBtn.focus();
 });
 
 closeBtn.addEventListener("click", () => {
     mobileMenu.classList.remove("translate-x-0");
     mobileMenu.classList.add("-translate-x-full");
+    menuBtn.setAttribute("aria-expanded", "false");
+    mobileMenu.setAttribute("aria-hidden", "true");
+    menuBtn.focus();
 });
 
 const faqs = [
@@ -199,18 +223,29 @@ const container = document.getElementById('faq-container');
 if (container) {
     container.innerHTML = faqs.map((item, index) => `
         <div class="faq-item flex flex-col glass rounded-md">
-            <h3 
-                class="faq-header flex cursor-pointer hover:bg-white/10 transition items-start justify-between gap-4 p-4 font-medium"
-                data-index="${index}"
-            >
-                ${item.question}
-                <svg class="chevron size-5 transition-all shrink-0 duration-400"
-                    fill="none" stroke="currentColor" stroke-width="2" 
-                    viewBox="0 0 24 24">
-                    <path d="M6 9l6 6 6-6" />
-                </svg>
+            <h3>
+                <button
+                    class="faq-header flex w-full cursor-pointer hover:bg-white/10 transition items-start justify-between gap-4 p-4 font-medium text-left"
+                    data-index="${index}"
+                    aria-expanded="false"
+                    aria-controls="faq-content-${index}"
+                    id="faq-header-${index}"
+                >
+                    ${item.question}
+                    <svg class="chevron size-5 transition-all shrink-0 duration-400"
+                        fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                </button>
             </h3>
-            <p class="faq-content px-4 text-sm/6 transition-all duration-400 overflow-hidden max-h-0">
+            <p
+                class="faq-content px-4 text-sm/6 transition-all duration-400 overflow-hidden max-h-0"
+                id="faq-content-${index}"
+                role="region"
+                aria-labelledby="faq-header-${index}"
+                hidden
+            >
                 ${item.answer}
             </p>
         </div>
@@ -221,24 +256,30 @@ if (container) {
     document.querySelectorAll(".faq-header").forEach(header => {
         header.addEventListener("click", () => {
             const index = header.getAttribute("data-index");
-            const content = header.nextElementSibling;
+            const content = document.getElementById(`faq-content-${index}`);
             const icon = header.querySelector(".chevron");
 
             if (openIndex === index) {
                 content.classList.remove("pt-2", "pb-4", "max-h-80");
                 content.classList.add("max-h-0");
+                content.hidden = true;
                 icon.classList.remove("rotate-180");
+                header.setAttribute("aria-expanded", "false");
                 openIndex = null;
             } else {
                 document.querySelectorAll(".faq-content").forEach(c => {
                     c.classList.remove("pt-2", "pb-4", "max-h-80");
                     c.classList.add("max-h-0");
+                    c.hidden = true;
                 });
+                document.querySelectorAll(".faq-header").forEach(h => h.setAttribute("aria-expanded", "false"));
                 document.querySelectorAll(".chevron").forEach(i => i.classList.remove("rotate-180"));
 
                 content.classList.remove("max-h-0");
                 content.classList.add("pt-2", "pb-4", "max-h-80");
+                content.hidden = false;
                 icon.classList.add("rotate-180");
+                header.setAttribute("aria-expanded", "true");
                 openIndex = index;
             }
         });
@@ -320,8 +361,28 @@ const mobileChevron = document.getElementById('mobile-chevron');
 
 if (mobileProductsBtn) {
     mobileProductsBtn.addEventListener('click', () => {
+        const isExpanded = mobileProductsBtn.getAttribute('aria-expanded') === 'true';
         mobileProductsMenu.classList.toggle('hidden');
         mobileProductsMenu.classList.toggle('flex');
         mobileChevron.classList.toggle('rotate-180');
+        mobileProductsBtn.setAttribute('aria-expanded', String(!isExpanded));
+    });
+}
+
+// Desktop products dropdown — keyboard support
+const desktopProductsBtn = document.getElementById('desktop-products-btn');
+const desktopProductsMenu = document.getElementById('desktop-products-menu');
+
+if (desktopProductsBtn && desktopProductsMenu) {
+    desktopProductsBtn.addEventListener('click', () => {
+        const isExpanded = desktopProductsBtn.getAttribute('aria-expanded') === 'true';
+        desktopProductsBtn.setAttribute('aria-expanded', String(!isExpanded));
+    });
+
+    // Close on outside click / focus leaving
+    document.addEventListener('click', (e) => {
+        if (!desktopProductsBtn.closest('.group').contains(e.target)) {
+            desktopProductsBtn.setAttribute('aria-expanded', 'false');
+        }
     });
 }

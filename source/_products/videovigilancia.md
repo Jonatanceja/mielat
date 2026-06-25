@@ -5,6 +5,7 @@ order: 1
 headline: Soluciones Avanzadas de Videovigilancia IP
 sub: Desde cámaras térmicas hasta reconocimiento facial, nuestras soluciones garantizan evidencia nítida y una gestión eficiente de la seguridad perimetral para empresas y comercios.
 photo: videovigilancia.webp
+og_image: videovigilancia.webp
 categories:
     - title: Camaras IP
       description: "Tecnología 4K y conectividad PoE para proyectos escalables. Máxima nitidez, analíticas inteligentes y acceso remoto total."

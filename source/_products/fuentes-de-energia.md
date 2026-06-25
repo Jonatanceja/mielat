@@ -5,6 +5,7 @@ order: 6
 headline: Soluciones Profesionales de Alimentación y Respaldo Energético
 sub: Desde UPS industriales hasta paneles solares, nuestras soluciones garantizan la continuidad operativa de cualquier sistema de seguridad o red ante cortes y variaciones del suministro eléctrico.
 photo: fuentes-de-energia.webp
+og_image: fuentes-de-energia.webp
 categories:
     - title: UPS y SAI
       description: "Sistemas de alimentación ininterrumpida para proteger equipos críticos ante cortes, micro-cortes y variaciones de tensión en la red eléctrica."

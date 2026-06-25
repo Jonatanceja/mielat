@@ -5,7 +5,7 @@
 @include('_partials.nav')
 @include('_partials.bg')       
 
-<main class="px-4">
+<main id="main-content" class="px-4">
 <section class="flex flex-col items-center">
     <!-- Swiper Slider -->
     <div class="w-full max-w-3xl">

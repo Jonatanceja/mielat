@@ -5,6 +5,7 @@ order: 2
 headline: Soluciones Profesionales de Detección de Intrusión
 sub: Desde paneles de alarma hasta detectores inalámbricos, nuestras soluciones protegen perímetros y espacios interiores con tecnología confiable y respuesta inmediata ante cualquier amenaza.
 photo: intrusion.webp
+og_image: intrusion.webp
 categories:
     - title: Centrales de Alarma
       description: "Paneles de control cableados e inalámbricos para gestionar zonas, usuarios y eventos de seguridad desde un único punto."

@@ -1,61 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="canonical" href="/producto">
-        <meta name="description" content="Mayoristas de Integración Electrónica">
-        <title>Mayoristas de Integración Electrónica</title>
+        <link rel="canonical" href="https://mie.lat/producto">
+        <meta name="description" content="Mayoristas de Distribución Electrónica">
+        <title>Mayoristas de Distribución Electrónica</title>
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://mie.lat/producto">
+        <meta property="og:title" content="Mayoristas de Distribución Electrónica">
+        <meta property="og:description" content="Mayoristas de Distribución Electrónica">
+        <meta property="og:image" content="https://mie.lat/assets/images/og-home.jpg">
+        <meta property="og:site_name" content="Mayoristas de Integración Electrónica">
+        <meta property="og:locale" content="es_MX">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Mayoristas de Distribución Electrónica">
+        <meta name="twitter:description" content="Mayoristas de Distribución Electrónica">
+        <meta name="twitter:image" content="https://mie.lat/assets/images/og-home.jpg">
+
         <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-                <link rel="stylesheet" href="/assets/build/assets/main-Dc-ypY3s.css">
-        <script defer type="module" src="/assets/build/assets/main-DWTNMzYe.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+                <link rel="stylesheet" href="/assets/build/assets/main-B8L37BdW.css">
+        <script defer type="module" src="/assets/build/assets/main-Xg5Hzbdq.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     </head>
     <body class="text-gray-900 font-sans antialiased">
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded focus:shadow-lg">Saltar al contenido principal</a>
         
-<nav id="navbar" class="sticky top-0 z-50 flex w-full items-center justify-between px-4 py-3.5 md:px-16 lg:px-24 transition-all duration-300">
-    <a href="/">
-        <img alt="logo" loading="lazy" width="205" height="48" decoding="async" data-nimg="1" class="h-14 w-auto" style="color: transparent" src="/assets/images/logo-mie.svg" />
+<nav id="navbar" class="sticky top-0 z-50 flex w-full items-center justify-between px-4 py-3.5 md:px-16 lg:px-24 transition-all duration-300" aria-label="Navegación principal">
+    <a href="/" aria-label="Mayoristas de Integración Electrónica – Inicio">
+        <img alt="Mayoristas de Integración Electrónica" loading="lazy" width="205" height="48" decoding="async" class="h-14 w-auto dark:block hidden" src="/assets/images/logo-mie.svg" />
+        <img alt="Mayoristas de Integración Electrónica" loading="lazy" width="205" height="48" decoding="async" class="h-14 w-auto dark:hidden block" src="/assets/images/logo-mie-dark.svg" />
     </a>
     <div class="hidden items-center space-x-10 md:flex">
-        <a class="transition hover:text-gray-300" href="/">Inicio</a>
-        <a class="transition hover:text-gray-300" href="/nosotros">Nosotros</a>
-        
+        <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/">Inicio</a>
+        <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/nosotros">Nosotros</a>
+
         <!-- Dropdown Productos -->
         <div class="relative group">
-            <button class="transition hover:text-gray-300 flex items-center gap-1">
+            <button
+                id="desktop-products-btn"
+                class="transition hover:text-gray-500 dark:hover:text-gray-300 flex items-center gap-1"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="desktop-products-menu"
+            >
                 Productos
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform group-hover:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform group-hover:rotate-180" aria-hidden="true">
                     <path d="m6 9 6 6 6-6"></path>
                 </svg>
             </button>
-            
+
             <!-- Dropdown Menu -->
-            <div class="absolute top-full left-0 mt-6 w-64 rounded-xl p-2 bg-gray-800 border border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg z-[999]">
-                                <a href="/productos/videovigilancia" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+            <div id="desktop-products-menu" role="menu" aria-labelledby="desktop-products-btn" class="absolute top-full left-0 mt-6 w-64 rounded-xl p-2 bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg z-[999]">
+                                <a href="/productos/videovigilancia" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Videovigilancia
                 </a>
-                                <a href="/productos/intrusion" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/intrusion" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Intrusión
                 </a>
-                                <a href="/productos/control-de-acceso" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/control-de-acceso" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Control de Acceso
                 </a>
-                                <a href="/productos/incendio" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/incendio" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Sistemas de Incendio
                 </a>
-                                <a href="/productos/cercas-electricas" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/cercas-electricas" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Cercas Eléctricas
                 </a>
-                                <a href="/productos/fuentes-de-energia" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/fuentes-de-energia" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Fuentes de Energía
                 </a>
                             </div>
         </div>
-        
+
+        <!-- Theme toggle -->
+        <button id="theme-toggle" class="transition hover:opacity-70 active:scale-90" aria-label="Cambiar tema">
+            <svg id="icon-system" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                <path d="M8 21h8M12 17v4"></path>
+            </svg>
+            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+        </button>
+
         <a class="btn glass" href="/contacto">Contacto</a>
     </div>
-    <button id="menu-btn" class="transition active:scale-90 md:hidden">
+    <button id="menu-btn" class="transition active:scale-90 md:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-6.5" aria-hidden="true">
             <path d="M4 5h16"></path>
             <path d="M4 12h16"></path>
@@ -65,55 +105,77 @@
 </nav>
 
 <!-- Mobile Menu -->
-<div id="mobile-menu" class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-black/20 text-lg font-medium backdrop-blur-2xl transition duration-300 md:hidden -translate-x-full">
-    <a class="transition hover:text-gray-300" href="/">Inicio</a>
-    <a class="transition hover:text-gray-300" href="/nosotros">Nosotros</a>
-    
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menú de navegación" aria-hidden="true" class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-white/90 dark:bg-black/20 text-lg font-medium backdrop-blur-2xl transition duration-300 md:hidden -translate-x-full">
+    <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/">Inicio</a>
+    <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/nosotros">Nosotros</a>
+
     <!-- Dropdown Mobile -->
     <div class="flex flex-col items-center gap-3">
-        <button id="mobile-products-btn" class="transition hover:text-gray-300 flex items-center gap-1">
+        <button
+            id="mobile-products-btn"
+            class="transition hover:text-gray-500 dark:hover:text-gray-300 flex items-center gap-1"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="mobile-products-menu"
+        >
             Productos
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform" id="mobile-chevron">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform" id="mobile-chevron" aria-hidden="true">
                 <path d="m6 9 6 6 6-6"></path>
             </svg>
         </button>
-        
+
         <div id="mobile-products-menu" class="hidden flex-col items-center gap-2 mt-2">
-                        <a href="/productos/videovigilancia" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/videovigilancia" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Videovigilancia
             </a>
-                        <a href="/productos/intrusion" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/intrusion" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Intrusión
             </a>
-                        <a href="/productos/control-de-acceso" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/control-de-acceso" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Control de Acceso
             </a>
-                        <a href="/productos/incendio" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/incendio" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Sistemas de Incendio
             </a>
-                        <a href="/productos/cercas-electricas" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/cercas-electricas" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Cercas Eléctricas
             </a>
-                        <a href="/productos/fuentes-de-energia" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/fuentes-de-energia" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Fuentes de Energía
             </a>
                     </div>
     </div>
-    
+
+    <!-- Theme toggle mobile -->
+    <button id="theme-toggle-mobile" class="transition hover:opacity-70 active:scale-90" aria-label="Cambiar tema">
+        <svg id="icon-system-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+            <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+            <path d="M8 21h8M12 17v4"></path>
+        </svg>
+        <svg id="icon-sun-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+        <svg id="icon-moon-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </svg>
+    </button>
+
     <a class="btn glass" href="/contacto">Contacto</a>
-    <button id="close-btn" class="rounded-md p-2 glass absolute top-5 right-2">
+    <button id="close-btn" class="rounded-md p-2 glass absolute top-5 right-2" aria-label="Cerrar menú">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true">
             <path d="M18 6 6 18"></path>
             <path d="m6 6 12 12"></path>
         </svg>
     </button>
-</div><div class="fixed inset-0 overflow-hidden -z-20 pointer-events-none">
-    <div class="absolute rounded-full top-80 left-2/5 -translate-x-1/2 size-130 bg-[#00b1ea] blur-[100px]"></div>
-    <div class="absolute rounded-full top-80 right-0 -translate-x-1/2 size-130 bg-[#2E08CF] blur-[100px]"></div>
-    <div class="absolute rounded-full top-0 left-1/2 -translate-x-1/2 size-130 bg-[#103857] blur-[100px]"></div>
+</div>
+<div class="fixed inset-0 overflow-hidden -z-20 pointer-events-none">
+    <div class="absolute rounded-full top-80 left-2/5 -translate-x-1/2 size-130 bg-[#00b1ea] blur-[100px] opacity-20 dark:opacity-100"></div>
+    <div class="absolute rounded-full top-80 right-0 -translate-x-1/2 size-130 bg-[#2E08CF] blur-[100px] opacity-15 dark:opacity-100"></div>
+    <div class="absolute rounded-full top-0 left-1/2 -translate-x-1/2 size-130 bg-[#103857] blur-[100px] opacity-20 dark:opacity-100"></div>
 </div>       
 
-<main class="px-4">
+<main id="main-content" class="px-4">
 <section class="flex flex-col items-center">
     <!-- Swiper Slider -->
     <div class="w-full max-w-3xl">
@@ -132,7 +194,6 @@
     <div class="flex flex-wrap justify-between max-sm:justify-center gap-10 max-w-4xl w-full mx-auto py-4" id="logo-container">
                     <img src="/assets/images/SVG/dahua.svg" alt="Dahua Technology" class="h-7 w-auto" />
                     <img src="/assets/images/SVG/ajax.svg" alt="Ajax Security" class="h-7 w-auto" />
-                    <img src="/assets/images/SVG/alarm.svg" alt="Alarm.com" class="h-7 w-auto" />
                     <img src="/assets/images/SVG/firelite.svg" alt="Firelite" class="h-7 w-auto" />
                     <img src="/assets/images/SVG/enson.svg" alt="Enson" class="h-7 w-auto" />
                     <img src="/assets/images/SVG/dsc.svg" alt="DSC" class="h-7 w-auto" />
@@ -270,30 +331,30 @@
     </div>
 </div>
 </main>
-<footer class="flex flex-col items-center px-4 md:px-16 lg:px-24 justify-center w-full pt-16 mt-40 glass border-0">
-            <a href="/">
-                <img alt="logo" loading="lazy" width="205" height="48" decoding="async" data-nimg="1" class="h-12 w-auto" style="color: transparent" src="/assets/images/logo-mie.svg" />
+<footer class="flex flex-col items-center px-4 md:px-16 lg:px-24 justify-center w-full pt-16 mt-40 glass border-0" aria-label="Pie de página">
+            <a href="/" aria-label="Mayoristas de Integración Electrónica – Inicio">
+                <img alt="Mayoristas de Integración Electrónica" loading="lazy" width="205" height="48" decoding="async" class="h-12 w-auto hidden dark:block" src="/assets/images/logo-mie.svg" />
+                <img alt="Mayoristas de Integración Electrónica" loading="lazy" width="205" height="48" decoding="async" class="h-12 w-auto block dark:hidden" src="/assets/images/logo-mie-dark.svg" />
             </a>
-            <div class="flex flex-wrap items-center justify-center gap-8 py-8">
-                <a class="transition hover:text-gray-300" href="#terms-of-service">Términos y condiciones</a>
-                <a class="transition hover:text-gray-300" href="#privacy-policy">Política de Prvacidad</a>
-                <a class="transition hover:text-gray-300" href="#sitemap">Mapa de sitio</a>
-            </div>
+            <nav aria-label="Navegación legal" class="flex flex-wrap items-center justify-center gap-8 py-8">
+                <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/terminos-y-condiciones">Términos y condiciones</a>
+                <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/politica-de-privacidad">Política de Privacidad</a>
+            </nav>
             <div class="flex items-center gap-6 pb-6">
-                <a href="https://www.facebook.com/mayoristas.de.integracion.electronica" class="hover:-translate-y-0.5 text-gray-200 transition-all duration-300">
+                <a href="https://www.facebook.com/mayoristas.de.integracion.electronica" class="hover:-translate-y-0.5 text-gray-500 dark:text-gray-200 transition-all duration-300" aria-label="Facebook de Mayoristas de Integración Electrónica" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook size-8.5" aria-hidden="true" class="h-5">
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
 </svg>
                 </a>
-                <a href="https://www.linkedin.com/company/mayoristas-de-integraci%C3%B3n-electr%C3%B3nica/?originalSubdomain=mx" class="hover:-translate-y-0.5 text-gray-200 transition-all duration-300">
+                <a href="https://www.linkedin.com/company/mayoristas-de-integraci%C3%B3n-electr%C3%B3nica/?originalSubdomain=mx" class="hover:-translate-y-0.5 text-gray-500 dark:text-gray-200 transition-all duration-300" aria-label="LinkedIn de Mayoristas de Integración Electrónica" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin size-8.5" aria-hidden="true" class="h-5">
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle>
 </svg>
                 </a>
             </div>
-            <hr class="w-full border-white/20 mt-6" />
+            <hr class="w-full border-black/10 dark:border-white/20 mt-6" />
             <div class="flex flex-col md:flex-row items-center w-full justify-center gap-4 py-4">
-                <p>Todos los derechos reservados © 2026 <strong>Mayoristas de Integración electrónica</strong></p>
+                <p>Todos los derechos reservados © 2026 <strong>Mayoristas de Distribución Electrónica</strong></p>
             </div>
         </footer>
     </body>

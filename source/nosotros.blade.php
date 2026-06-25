@@ -5,7 +5,7 @@
 @include('_partials.nav')
 @include('_partials.bg')       
 
-<main class="px-4">
+<main id="main-content" class="px-4">
     <section class="mt-32 relative">
         @include('_partials.coverabout')
         @include('_partials.mission')

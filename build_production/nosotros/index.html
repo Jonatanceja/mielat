@@ -1,61 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="canonical" href="/nosotros">
-        <meta name="description" content="Mayoristas de Integración Electrónica">
-        <title>Mayoristas de Integración Electrónica</title>
+        <link rel="canonical" href="https://mie.lat/nosotros">
+        <meta name="description" content="Mayoristas de Distribución Electrónica">
+        <title>Mayoristas de Distribución Electrónica</title>
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://mie.lat/nosotros">
+        <meta property="og:title" content="Mayoristas de Distribución Electrónica">
+        <meta property="og:description" content="Mayoristas de Distribución Electrónica">
+        <meta property="og:image" content="https://mie.lat/assets/images/og-home.jpg">
+        <meta property="og:site_name" content="Mayoristas de Integración Electrónica">
+        <meta property="og:locale" content="es_MX">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Mayoristas de Distribución Electrónica">
+        <meta name="twitter:description" content="Mayoristas de Distribución Electrónica">
+        <meta name="twitter:image" content="https://mie.lat/assets/images/og-home.jpg">
+
         <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-                <link rel="stylesheet" href="/assets/build/assets/main-Dc-ypY3s.css">
-        <script defer type="module" src="/assets/build/assets/main-DWTNMzYe.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+                <link rel="stylesheet" href="/assets/build/assets/main-B8L37BdW.css">
+        <script defer type="module" src="/assets/build/assets/main-Xg5Hzbdq.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     </head>
     <body class="text-gray-900 font-sans antialiased">
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded focus:shadow-lg">Saltar al contenido principal</a>
         
-<nav id="navbar" class="sticky top-0 z-50 flex w-full items-center justify-between px-4 py-3.5 md:px-16 lg:px-24 transition-all duration-300">
-    <a href="/">
-        <img alt="logo" loading="lazy" width="205" height="48" decoding="async" data-nimg="1" class="h-14 w-auto" style="color: transparent" src="/assets/images/logo-mie.svg" />
+<nav id="navbar" class="sticky top-0 z-50 flex w-full items-center justify-between px-4 py-3.5 md:px-16 lg:px-24 transition-all duration-300" aria-label="Navegación principal">
+    <a href="/" aria-label="Mayoristas de Integración Electrónica – Inicio">
+        <img alt="Mayoristas de Integración Electrónica" loading="lazy" width="205" height="48" decoding="async" class="h-14 w-auto dark:block hidden" src="/assets/images/logo-mie.svg" />
+        <img alt="Mayoristas de Integración Electrónica" loading="lazy" width="205" height="48" decoding="async" class="h-14 w-auto dark:hidden block" src="/assets/images/logo-mie-dark.svg" />
     </a>
     <div class="hidden items-center space-x-10 md:flex">
-        <a class="transition hover:text-gray-300" href="/">Inicio</a>
-        <a class="transition hover:text-gray-300" href="/nosotros">Nosotros</a>
-        
+        <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/">Inicio</a>
+        <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/nosotros">Nosotros</a>
+
         <!-- Dropdown Productos -->
         <div class="relative group">
-            <button class="transition hover:text-gray-300 flex items-center gap-1">
+            <button
+                id="desktop-products-btn"
+                class="transition hover:text-gray-500 dark:hover:text-gray-300 flex items-center gap-1"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="desktop-products-menu"
+            >
                 Productos
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform group-hover:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform group-hover:rotate-180" aria-hidden="true">
                     <path d="m6 9 6 6 6-6"></path>
                 </svg>
             </button>
-            
+
             <!-- Dropdown Menu -->
-            <div class="absolute top-full left-0 mt-6 w-64 rounded-xl p-2 bg-gray-800 border border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg z-[999]">
-                                <a href="/productos/videovigilancia" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+            <div id="desktop-products-menu" role="menu" aria-labelledby="desktop-products-btn" class="absolute top-full left-0 mt-6 w-64 rounded-xl p-2 bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg z-[999]">
+                                <a href="/productos/videovigilancia" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Videovigilancia
                 </a>
-                                <a href="/productos/intrusion" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/intrusion" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Intrusión
                 </a>
-                                <a href="/productos/control-de-acceso" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/control-de-acceso" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Control de Acceso
                 </a>
-                                <a href="/productos/incendio" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/incendio" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Sistemas de Incendio
                 </a>
-                                <a href="/productos/cercas-electricas" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/cercas-electricas" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Cercas Eléctricas
                 </a>
-                                <a href="/productos/fuentes-de-energia" class="block px-4 py-3 rounded-lg hover:bg-white/10 transition">
+                                <a href="/productos/fuentes-de-energia" role="menuitem" class="block px-4 py-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition">
                     Fuentes de Energía
                 </a>
                             </div>
         </div>
-        
+
+        <!-- Theme toggle -->
+        <button id="theme-toggle" class="transition hover:opacity-70 active:scale-90" aria-label="Cambiar tema">
+            <svg id="icon-system" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                <path d="M8 21h8M12 17v4"></path>
+            </svg>
+            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+        </button>
+
         <a class="btn glass" href="/contacto">Contacto</a>
     </div>
-    <button id="menu-btn" class="transition active:scale-90 md:hidden">
+    <button id="menu-btn" class="transition active:scale-90 md:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-6.5" aria-hidden="true">
             <path d="M4 5h16"></path>
             <path d="M4 12h16"></path>
@@ -65,59 +105,81 @@
 </nav>
 
 <!-- Mobile Menu -->
-<div id="mobile-menu" class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-black/20 text-lg font-medium backdrop-blur-2xl transition duration-300 md:hidden -translate-x-full">
-    <a class="transition hover:text-gray-300" href="/">Inicio</a>
-    <a class="transition hover:text-gray-300" href="/nosotros">Nosotros</a>
-    
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menú de navegación" aria-hidden="true" class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-white/90 dark:bg-black/20 text-lg font-medium backdrop-blur-2xl transition duration-300 md:hidden -translate-x-full">
+    <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/">Inicio</a>
+    <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/nosotros">Nosotros</a>
+
     <!-- Dropdown Mobile -->
     <div class="flex flex-col items-center gap-3">
-        <button id="mobile-products-btn" class="transition hover:text-gray-300 flex items-center gap-1">
+        <button
+            id="mobile-products-btn"
+            class="transition hover:text-gray-500 dark:hover:text-gray-300 flex items-center gap-1"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="mobile-products-menu"
+        >
             Productos
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform" id="mobile-chevron">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform" id="mobile-chevron" aria-hidden="true">
                 <path d="m6 9 6 6 6-6"></path>
             </svg>
         </button>
-        
+
         <div id="mobile-products-menu" class="hidden flex-col items-center gap-2 mt-2">
-                        <a href="/productos/videovigilancia" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/videovigilancia" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Videovigilancia
             </a>
-                        <a href="/productos/intrusion" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/intrusion" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Intrusión
             </a>
-                        <a href="/productos/control-de-acceso" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/control-de-acceso" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Control de Acceso
             </a>
-                        <a href="/productos/incendio" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/incendio" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Sistemas de Incendio
             </a>
-                        <a href="/productos/cercas-electricas" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/cercas-electricas" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Cercas Eléctricas
             </a>
-                        <a href="/productos/fuentes-de-energia" class="text-sm text-gray-300 hover:text-white transition">
+                        <a href="/productos/fuentes-de-energia" class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition">
                 Fuentes de Energía
             </a>
                     </div>
     </div>
-    
+
+    <!-- Theme toggle mobile -->
+    <button id="theme-toggle-mobile" class="transition hover:opacity-70 active:scale-90" aria-label="Cambiar tema">
+        <svg id="icon-system-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+            <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+            <path d="M8 21h8M12 17v4"></path>
+        </svg>
+        <svg id="icon-sun-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+        <svg id="icon-moon-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </svg>
+    </button>
+
     <a class="btn glass" href="/contacto">Contacto</a>
-    <button id="close-btn" class="rounded-md p-2 glass absolute top-5 right-2">
+    <button id="close-btn" class="rounded-md p-2 glass absolute top-5 right-2" aria-label="Cerrar menú">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true">
             <path d="M18 6 6 18"></path>
             <path d="m6 6 12 12"></path>
         </svg>
     </button>
-</div><div class="fixed inset-0 overflow-hidden -z-20 pointer-events-none">
-    <div class="absolute rounded-full top-80 left-2/5 -translate-x-1/2 size-130 bg-[#00b1ea] blur-[100px]"></div>
-    <div class="absolute rounded-full top-80 right-0 -translate-x-1/2 size-130 bg-[#2E08CF] blur-[100px]"></div>
-    <div class="absolute rounded-full top-0 left-1/2 -translate-x-1/2 size-130 bg-[#103857] blur-[100px]"></div>
+</div>
+<div class="fixed inset-0 overflow-hidden -z-20 pointer-events-none">
+    <div class="absolute rounded-full top-80 left-2/5 -translate-x-1/2 size-130 bg-[#00b1ea] blur-[100px] opacity-20 dark:opacity-100"></div>
+    <div class="absolute rounded-full top-80 right-0 -translate-x-1/2 size-130 bg-[#2E08CF] blur-[100px] opacity-15 dark:opacity-100"></div>
+    <div class="absolute rounded-full top-0 left-1/2 -translate-x-1/2 size-130 bg-[#103857] blur-[100px] opacity-20 dark:opacity-100"></div>
 </div>       
 
-<main class="px-4">
+<main id="main-content" class="px-4">
     <section class="mt-32 relative">
         <div class="text-center flex flex-col justify-center">
     <h2 class="text-center text-4xl/13 md:text-6xl/19 font-semibold tracking-tight max-w-4xl mx-auto">Más de una Década Protegiendo lo que Importa</h2>
-    <p class="text-center text-gray-100 text-base/7 max-w-lg mt-6 mx-auto">Somos especialistas en distribución de tecnología de seguridad electrónica para integradores profesionales en toda la región.</p>
+    <p class="text-center text-gray-600 dark:text-gray-100 text-base/7 max-w-lg mt-6 mx-auto">Somos especialistas en distribución de tecnología de seguridad electrónica para instaladores y empresas de seguridad en toda la región.</p>
 </div>        <div class="mt-16 max-w-5xl mx-auto">
             <!-- Misión y Visión -->
             <div class="grid md:grid-cols-2 gap-6 mb-8">
@@ -129,8 +191,8 @@
                                 <circle cx="12" cy="12" r="2"></circle>
                             </svg>
                         <div>
-                            <h3 class="text-xl font-semibold text-white mb-3">Nuestra Misión</h3>
-                            <p class="text-gray-100 text-base/7">Ofrecer a nuestros clientes soluciones reales a sus problemas cotidianos, mejorando su entorno con nuestra experiencia y conocimiento.</p>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Nuestra Misión</h3>
+                            <p class="text-gray-600 dark:text-gray-100 text-base/7">Ofrecer a nuestros clientes soluciones reales a sus problemas cotidianos, mejorando su entorno con nuestra experiencia y conocimiento.</p>
                         </div>
                     </div>
                 </div>
@@ -142,8 +204,8 @@
                                 <circle cx="12" cy="12" r="3"></circle>
                             </svg>
                         <div>
-                            <h3 class="text-xl font-semibold text-white mb-3">Nuestra Visión</h3>
-                            <p class="text-gray-100 text-base/7">Posicionarnos en la mente de nuestros consumidores como la primera opción en sus proyectos de TI</p>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Nuestra Visión</h3>
+                            <p class="text-gray-600 dark:text-gray-100 text-base/7">Posicionarnos en la mente de nuestros consumidores como la primera opción en sus proyectos de TI</p>
                         </div>
                     </div>
                 </div>
@@ -158,7 +220,7 @@
                             <path d="m15 18-2-2"></path>
                         </svg>
                     <div>
-                        <h3 class="text-2xl font-semibold text-white mb-6">Nuestros Valores</h3>
+                        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Nuestros Valores</h3>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="flex items-start gap-3">
                                 <div class="glass rounded-full p-2 mt-1">
@@ -167,8 +229,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-1">Compromiso</h4>
-                                    <p class="text-gray-100 text-base/6">Con la calidad y satisfacción de nuestros clientes.</p>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Compromiso</h4>
+                                    <p class="text-gray-600 dark:text-gray-100 text-base/6">Con la calidad y satisfacción de nuestros clientes.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
@@ -178,8 +240,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-1">Confianza</h4>
-                                    <p class="text-gray-100 text-base/6">Construyendo relaciones duraderas y transparentes.</p>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Confianza</h4>
+                                    <p class="text-gray-600 dark:text-gray-100 text-base/6">Construyendo relaciones duraderas y transparentes.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
@@ -189,8 +251,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-1">Excelencia</h4>
-                                    <p class="text-gray-100 text-base/6">En cada producto y servicio que ofrecemos.</p>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Excelencia</h4>
+                                    <p class="text-gray-600 dark:text-gray-100 text-base/6">En cada producto y servicio que ofrecemos.</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
@@ -200,15 +262,15 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-white mb-1">Innovación</h4>
-                                    <p class="text-gray-100 text-base/6">Manteniéndonos a la vanguardia tecnológica.</p>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Innovación</h4>
+                                    <p class="text-gray-600 dark:text-gray-100 text-base/6">Manteniéndonos a la vanguardia tecnológica.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>        <!-- Por qué elegirnos -->
-            <h3 class="text-4xl font-semibold text-white mb-6 text-center mt-40">¿Por Qué Elegirnos?</h3>
+            <h3 class="text-4xl font-semibold text-gray-900 dark:text-white mb-6 text-center mt-40">¿Por Qué Elegirnos?</h3>
             <div class="mt-8">
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="text-center glass rounded-2xl p-8 md:p-12">
@@ -218,8 +280,8 @@
                                 <circle cx="12" cy="8" r="6"></circle>
                             </svg>
                         </div>
-                        <h4 class="font-semibold text-white mb-2">Experiencia Comprobada</h4>
-                        <p class="text-gray-100 text-base/6">Años de trayectoria respaldando proyectos exitosos.</p>
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Experiencia Comprobada</h4>
+                        <p class="text-gray-600 dark:text-gray-100 text-base/6">Años de trayectoria respaldando proyectos exitosos.</p>
                     </div>
                     <div class="text-center glass rounded-2xl p-8 md:p-12">
                         <div class="flex flex-col justify-center items-center mb-4">
@@ -228,8 +290,8 @@
                                 <path d="M21 16v2a4 4 0 0 1-4 4h-5"></path>
                             </svg>
                         </div>
-                        <h4 class="font-semibold text-white mb-2">Soporte Técnico Experto</h4>
-                        <p class="text-gray-100 text-base/6">Asesoría personalizada antes, durante y después de la venta.</p>
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Soporte Técnico Experto</h4>
+                        <p class="text-gray-600 dark:text-gray-100 text-base/6">Asesoría personalizada antes, durante y después de la venta.</p>
                     </div>
                     <div class="text-center glass rounded-2xl p-8 md:p-12">
                         <div class="flex flex-col justify-center items-center mb-4">
@@ -241,76 +303,126 @@
                                 <line x1="12" x2="12" y1="22" y2="12"></line>
                             </svg>
                         </div>
-                        <h4 class="font-semibold text-white mb-2">Stock Disponible</h4>
-                        <p class="text-gray-100 text-base/6">Inventario amplio y entrega inmediata de productos.</p>
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Stock Disponible</h4>
+                        <p class="text-gray-600 dark:text-gray-100 text-base/6">Inventario amplio y entrega inmediata de productos.</p>
                     </div>
                 </div>
             </div>        
             <!-- Historia -->
-            <h3 class="text-4xl font-semibold text-white mb-6 text-center mt-40">Nuestra Historia</h3>
-            <div class="glass rounded-2xl p-8 md:p-12 mb-6">
-                <div class="flex items-center gap-4 mb-2">
-                    <svg class="h-6 -mt-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle> </g></svg>
-                    <h4 class="font-semibold text-white mb-2">1994</h4>
-                </div>
-                    <div>
-                        <p class="text-gray-100 text-base/7">Inicio de operaciones bajo la razón social SIMMS S. A de C.V Empresa dedicada a la comercialización de componentes Electrónicos al mayoreo.</p>
+            <h3 class="text-4xl font-semibold text-gray-900 dark:text-white mb-4 text-center mt-40">Nuestra Historia</h3>
+            <p class="text-center text-gray-500 dark:text-gray-400 text-sm mb-16 tracking-widest uppercase">Más de 30 años construyendo confianza</p>
+
+            <div class="relative max-w-2xl mx-auto">
+                <!-- Vertical line -->
+                <div class="absolute left-6 top-0 bottom-0 w-px bg-black/10 dark:bg-white/20"></div>
+
+                <!-- 1994 -->
+                <div class="relative flex items-center gap-8 mb-12">
+                    <div class="flex-shrink-0 w-12 flex justify-center">
+                        <div class="w-3 h-3 rounded-full bg-white ring-4 ring-gray-900/20 dark:ring-white/20 z-10"></div>
                     </div>
-            </div>
-            <div class="glass rounded-2xl p-8 md:p-12 mb-6">
-                <div class="flex items-center gap-4 mb-2">
-                    <svg class="h-6 -mt-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle> </g></svg>
-                    <h4 class="font-semibold text-white mb-2">1999</h4>
-                </div>
-                    <div>
-                        <p class="text-gray-100 text-base/7">Con el propósito de diversificar su mercado y brindar un servicio más cercano a sus clientes se constituyo Power Graphics computer S. A de C.V enfocada a solucionar los problemas IT del hogar.</p>
+                    <div class="glass rounded-2xl p-6 flex-1">
+                        <span class="text-xs font-semibold tracking-widest text-gray-500 dark:text-gray-400 uppercase">1994</span>
+                        <h4 class="font-semibold text-gray-900 dark:text-white text-lg mt-1 mb-3">Fundación — SIMMS S.A de C.V</h4>
+                        <ul class="space-y-2">
+                            <li class="flex gap-2 text-gray-500 dark:text-gray-300 text-sm/6">
+                                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-gray-900/20 dark:bg-white/50 flex-shrink-0"></span>
+                                Inicio de operaciones como empresa dedicada a la comercialización de componentes electrónicos al mayoreo.
+                            </li>
+                        </ul>
                     </div>
-            </div>
-            <div class="glass rounded-2xl p-8 md:p-12 mb-6">
-                <div class="flex items-center gap-4 mb-2">
-                    <svg class="h-6 -mt-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle> </g></svg>
-                    <h4 class="font-semibold text-white mb-2">2014</h4>
                 </div>
-                    <div>
-                        <p class="text-gray-100 text-base/7">Para atención a los requerimientos del mercado en el área de CCTV, Cableado Estructurado, Voz y Datos y A/C nace Mayoristas de integración electrónica S de R.L de C.V</p>
+
+                <!-- 1999 -->
+                <div class="relative flex items-center gap-8 mb-12">
+                    <div class="flex-shrink-0 w-12 flex justify-center">
+                        <div class="w-3 h-3 rounded-full bg-white ring-4 ring-gray-900/20 dark:ring-white/20 z-10"></div>
                     </div>
-            </div>
-            <div class="glass rounded-2xl p-8 md:p-12 mb-6">
-                <div class="flex items-center gap-4 mb-2">
-                    <svg class="h-6 -mt-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle> </g></svg>
-                    <h4 class="font-semibold text-white mb-2">2017</h4>
+                    <div class="glass rounded-2xl p-6 flex-1">
+                        <span class="text-xs font-semibold tracking-widest text-gray-500 dark:text-gray-400 uppercase">1999</span>
+                        <h4 class="font-semibold text-gray-900 dark:text-white text-lg mt-1 mb-3">Expansión — Power Graphics Computer S.A de C.V</h4>
+                        <ul class="space-y-2">
+                            <li class="flex gap-2 text-gray-500 dark:text-gray-300 text-sm/6">
+                                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-gray-900/20 dark:bg-white/50 flex-shrink-0"></span>
+                                Diversificación del mercado para brindar un servicio más cercano al cliente final.
+                            </li>
+                            <li class="flex gap-2 text-gray-500 dark:text-gray-300 text-sm/6">
+                                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-gray-900/20 dark:bg-white/50 flex-shrink-0"></span>
+                                Enfoque en solucionar problemas de IT para el hogar y pequeñas empresas.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                    <div>
-                        <p class="text-gray-100 text-base/7">Inicia proceso para fomentar alianzas estrategias con nuestros proveedores a fin de garantizar costos competitivos y calidad en el servicio post venta.</p>
+
+                <!-- 2014 -->
+                <div class="relative flex items-center gap-8 mb-12">
+                    <div class="flex-shrink-0 w-12 flex justify-center">
+                        <div class="w-3 h-3 rounded-full bg-white ring-4 ring-gray-900/20 dark:ring-white/20 z-10"></div>
                     </div>
+                    <div class="glass rounded-2xl p-6 flex-1">
+                        <span class="text-xs font-semibold tracking-widest text-gray-500 dark:text-gray-400 uppercase">2014</span>
+                        <h4 class="font-semibold text-gray-900 dark:text-white text-lg mt-1 mb-3">Especialización — Mayoristas de Distribución Electrónica S de R.L de C.V</h4>
+                        <ul class="space-y-2">
+                            <li class="flex gap-2 text-gray-500 dark:text-gray-300 text-sm/6">
+                                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-gray-900/20 dark:bg-white/50 flex-shrink-0"></span>
+                                Respuesta a la demanda del mercado en CCTV y videovigilancia.
+                            </li>
+                            <li class="flex gap-2 text-gray-500 dark:text-gray-300 text-sm/6">
+                                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-gray-900/20 dark:bg-white/50 flex-shrink-0"></span>
+                                Integración de soluciones de Cableado Estructurado, Voz y Datos, y A/C.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2017 -->
+                <div class="relative flex items-center gap-8">
+                    <div class="flex-shrink-0 w-12 flex justify-center">
+                        <div class="w-3 h-3 rounded-full bg-white ring-4 ring-gray-900/20 dark:ring-white/20 z-10"></div>
+                    </div>
+                    <div class="glass rounded-2xl p-6 flex-1">
+                        <span class="text-xs font-semibold tracking-widest text-gray-500 dark:text-gray-400 uppercase">2017</span>
+                        <h4 class="font-semibold text-gray-900 dark:text-white text-lg mt-1 mb-3">Consolidación estratégica</h4>
+                        <ul class="space-y-2">
+                            <li class="flex gap-2 text-gray-500 dark:text-gray-300 text-sm/6">
+                                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-gray-900/20 dark:bg-white/50 flex-shrink-0"></span>
+                                Inicio de alianzas estratégicas con proveedores clave del sector.
+                            </li>
+                            <li class="flex gap-2 text-gray-500 dark:text-gray-300 text-sm/6">
+                                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-gray-900/20 dark:bg-white/50 flex-shrink-0"></span>
+                                Garantía de costos competitivos y calidad en el servicio post venta.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 </main>
-<footer class="flex flex-col items-center px-4 md:px-16 lg:px-24 justify-center w-full pt-16 mt-40 glass border-0">
-            <a href="/">
-                <img alt="logo" loading="lazy" width="205" height="48" decoding="async" data-nimg="1" class="h-12 w-auto" style="color: transparent" src="/assets/images/logo-mie.svg" />
+<footer class="flex flex-col items-center px-4 md:px-16 lg:px-24 justify-center w-full pt-16 mt-40 glass border-0" aria-label="Pie de página">
+            <a href="/" aria-label="Mayoristas de Integración Electrónica – Inicio">
+                <img alt="Mayoristas de Integración Electrónica" loading="lazy" width="205" height="48" decoding="async" class="h-12 w-auto hidden dark:block" src="/assets/images/logo-mie.svg" />
+                <img alt="Mayoristas de Integración Electrónica" loading="lazy" width="205" height="48" decoding="async" class="h-12 w-auto block dark:hidden" src="/assets/images/logo-mie-dark.svg" />
             </a>
-            <div class="flex flex-wrap items-center justify-center gap-8 py-8">
-                <a class="transition hover:text-gray-300" href="#terms-of-service">Términos y condiciones</a>
-                <a class="transition hover:text-gray-300" href="#privacy-policy">Política de Prvacidad</a>
-                <a class="transition hover:text-gray-300" href="#sitemap">Mapa de sitio</a>
-            </div>
+            <nav aria-label="Navegación legal" class="flex flex-wrap items-center justify-center gap-8 py-8">
+                <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/terminos-y-condiciones">Términos y condiciones</a>
+                <a class="transition hover:text-gray-500 dark:hover:text-gray-300" href="/politica-de-privacidad">Política de Privacidad</a>
+            </nav>
             <div class="flex items-center gap-6 pb-6">
-                <a href="https://www.facebook.com/mayoristas.de.integracion.electronica" class="hover:-translate-y-0.5 text-gray-200 transition-all duration-300">
+                <a href="https://www.facebook.com/mayoristas.de.integracion.electronica" class="hover:-translate-y-0.5 text-gray-500 dark:text-gray-200 transition-all duration-300" aria-label="Facebook de Mayoristas de Integración Electrónica" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook size-8.5" aria-hidden="true" class="h-5">
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
 </svg>
                 </a>
-                <a href="https://www.linkedin.com/company/mayoristas-de-integraci%C3%B3n-electr%C3%B3nica/?originalSubdomain=mx" class="hover:-translate-y-0.5 text-gray-200 transition-all duration-300">
+                <a href="https://www.linkedin.com/company/mayoristas-de-integraci%C3%B3n-electr%C3%B3nica/?originalSubdomain=mx" class="hover:-translate-y-0.5 text-gray-500 dark:text-gray-200 transition-all duration-300" aria-label="LinkedIn de Mayoristas de Integración Electrónica" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin size-8.5" aria-hidden="true" class="h-5">
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle>
 </svg>
                 </a>
             </div>
-            <hr class="w-full border-white/20 mt-6" />
+            <hr class="w-full border-black/10 dark:border-white/20 mt-6" />
             <div class="flex flex-col md:flex-row items-center w-full justify-center gap-4 py-4">
-                <p>Todos los derechos reservados © 2026 <strong>Mayoristas de Integración electrónica</strong></p>
+                <p>Todos los derechos reservados © 2026 <strong>Mayoristas de Distribución Electrónica</strong></p>
             </div>
         </footer>
     </body>
